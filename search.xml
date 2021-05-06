@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo搭建和备份</title>
-    <url>/2020/07/01/hexo-backup/</url>
-    <content><![CDATA[<p>由于更换电脑和系统造成博客没有持续进行下去，所以要解决在不同电脑维护、配置、找回博客内容。</p>
-<p>总结得到以下两种方法：</p>
-<ol>
-<li>通过 GIT 使用不同分支存储不同的内容<ul>
-<li>生成静态网页</li>
-<li>整个驱动程序</li>
-</ul>
-</li>
-<li>通过 onedrive 同步 <span id="more"></span></li>
-</ol>
-<h2 id="Hexo-搭建"><a href="#Hexo-搭建" class="headerlink" title="Hexo 搭建"></a>Hexo 搭建</h2><h3 id="安装-GIT"><a href="#安装-GIT" class="headerlink" title="安装 GIT"></a><a href="https://git-scm.com/book/en/v2">安装 GIT</a></h3><p>git <a href="https://git-scm.com/downloads">下载地址</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Ubuntu system</span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><a href="https://hexo.io/">安装 Hexo</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># initiallzation</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line"># Install related plug-ins</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Hexo-备份"><a href="#Hexo-备份" class="headerlink" title="Hexo 备份"></a>Hexo 备份</h2><h3 id="使用-OneDrive"><a href="#使用-OneDrive" class="headerlink" title="使用 OneDrive"></a>使用 OneDrive</h3><p>如果你需要更换系统或设备, 只需同步 OneDrive 后, 安装<code>git</code> <code>node</code> <code>npm</code> <code>hexo</code> 以及进入目录安装相关插件 <code>npm install </code>,最好使用 Linux 系统,我个人是在 Win10 安装碰到各种坑</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>BurpSuite破解安装</title>
     <url>/2020/07/11/burpsuite-install/</url>
     <content><![CDATA[<h2 id="Burpsuite简介"><a href="#Burpsuite简介" class="headerlink" title="Burpsuite简介"></a>Burpsuite简介</h2><p>BurpSuite 是用于攻击web应用程序的集成平台。它包含了许多工具，并为这些工具设计了许多接口，以促进加快攻击应用程序的过程。</p>
@@ -114,24 +78,390 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2000/07/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Hexo搭建和备份</title>
+    <url>/2020/07/01/hexo-backup/</url>
+    <content><![CDATA[<p>由于更换电脑和系统造成博客没有持续进行下去，所以要解决在不同电脑维护、配置、找回博客内容。</p>
+<p>总结得到以下两种方法：</p>
+<ol>
+<li>通过 GIT 使用不同分支存储不同的内容<ul>
+<li>生成静态网页</li>
+<li>整个驱动程序</li>
+</ul>
+</li>
+<li>通过 onedrive 同步 <span id="more"></span></li>
+</ol>
+<h2 id="Hexo-搭建"><a href="#Hexo-搭建" class="headerlink" title="Hexo 搭建"></a>Hexo 搭建</h2><h3 id="安装-GIT"><a href="#安装-GIT" class="headerlink" title="安装 GIT"></a><a href="https://git-scm.com/book/en/v2">安装 GIT</a></h3><p>git <a href="https://git-scm.com/downloads">下载地址</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Ubuntu system</span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><a href="https://hexo.io/">安装 Hexo</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># initiallzation</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line"># Install related plug-ins</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Hexo-备份"><a href="#Hexo-备份" class="headerlink" title="Hexo 备份"></a>Hexo 备份</h2><h3 id="使用-OneDrive"><a href="#使用-OneDrive" class="headerlink" title="使用 OneDrive"></a>使用 OneDrive</h3><p>如果你需要更换系统或设备, 只需同步 OneDrive 后, 安装<code>git</code> <code>node</code> <code>npm</code> <code>hexo</code> 以及进入目录安装相关插件 <code>npm install </code>,最好使用 Linux 系统,我个人是在 Win10 安装碰到各种坑</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pycharm配置github</title>
+    <url>/2020/07/18/pycharm-git/</url>
+    <content><![CDATA[<p><strong>配置环境前提：</strong></p>
+<ol>
+<li><p>安装git，<a href="https://git-scm.com/downloads">下载链接</a></p>
+</li>
+<li><p>git-ssh配置，<a href="https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5">教程</a></p>
+</li>
+<li><p>安装pycharm，下载地址：链接：<a href="https://pan.baidu.com/s/1SkY4nATX92-SYQZwBBxZCw">https://pan.baidu.com/s/1SkY4nATX92-SYQZwBBxZCw</a><br>提取码：v47x <span id="more"></span></p>
+</li>
+</ol>
+<h2 id="设置git"><a href="#设置git" class="headerlink" title="设置git"></a>设置git</h2><p>File -&gt; Settings -&gt; Version Control -&gt; Git</p>
+<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_00.png?raw=true"></p>
+<p>一般情况下，git目录会自动识别</p>
+<h2 id="设置github"><a href="#设置github" class="headerlink" title="设置github"></a>设置github</h2><p>File -&gt; Settings -&gt; Version Control -&gt; GitHub</p>
+<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_01.png?raw=true"></p>
+<h2 id="上传项目到github"><a href="#上传项目到github" class="headerlink" title="上传项目到github"></a>上传项目到github</h2><p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_03.png?raw=true"></p>
+<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_04.png?raw=true"></p>
+<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_05.png?raw=true"></p>
+<p>上传成功后在 Pycharm 右下方会提示 Successfully shared project on GitHub</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p><a href="https://blog.csdn.net/qq_35203425/article/details/78561039">pycharm环境下将python项目提交到github</a></p>
+<p><a href="https://git-scm.com/book/en/v2">Git Documentation</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+        <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python多线程</title>
+    <url>/2020/06/28/python-thread/</url>
+    <content><![CDATA[<h2 id="Python多线程简介"><a href="#Python多线程简介" class="headerlink" title="Python多线程简介"></a>Python多线程简介</h2><ul>
+<li>一个应用程序最少有一个进程，而一个进程有一个或多个线程</li>
+<li>Python提供两个线程标准库 <code> _thread</code>  和 <code>threading</code></li>
+<li>Python适用于I/O密集型，涉及到网络、磁盘I/O的任务，不适用于计算密集型任务</li>
+</ul>
 <span id="more"></span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Python多线程实例"><a href="#Python多线程实例" class="headerlink" title="Python多线程实例"></a>Python多线程实例</h2><h3 id="基础例子"><a href="#基础例子" class="headerlink" title="基础例子"></a>基础例子</h3><h4 id="通过继承-Thread-类"><a href="#通过继承-Thread-类" class="headerlink" title="通过继承 Thread 类"></a>通过继承 Thread 类</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span>(<span class="params">threading.Thread</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, thread_name</span>):</span></span><br><span class="line">        <span class="comment"># call the parent class&#x27;s implementation for __init__</span></span><br><span class="line">        <span class="built_in">super</span>(MyThread, self).__init__(name=thread_name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; is running...&quot;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">        MyThread(<span class="string">&quot;thread &#123;&#125; &quot;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(i))).start()</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="实例化threading-Thread对象"><a href="#实例化threading-Thread对象" class="headerlink" title="实例化threading.Thread对象"></a>实例化<code>threading.Thread</code>对象</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">arg</span>):</span></span><br><span class="line">    time.sleep(<span class="number">0.5</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;thread &#123;&#125; is running&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(arg)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">        t = threading.Thread(target=run, args=(i,))</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Thread类的常用方法"><a href="#Thread类的常用方法" class="headerlink" title="Thread类的常用方法"></a>Thread类的常用方法</h3><h4 id="join-方法"><a href="#join-方法" class="headerlink" title="join()方法"></a>join()方法</h4><p>Python多线程在执行过程中，每个线程各执行各的任务，不等待其它的线程，自顾自的完成自己的任务</p>
+<p>如果我们希望主线程等子线程完成后再继续执行主线程，就需要调用 <code>join()</code> 方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;start run:&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;stop run&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br><span class="line"></span><br><span class="line">t = threading.Thread(target=run)</span><br><span class="line">t.start()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">0.5</span>)       <span class="comment"># 等待子线程启动</span></span><br><span class="line">t.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;end code&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="setDaemon-方法"><a href="#setDaemon-方法" class="headerlink" title="setDaemon()方法"></a>setDaemon()方法</h4><p>我们可以把<strong>子线程设置成主线程的守护线程</strong>，就是当主线程结束后，守护线程也会结束</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(threading.current_thread().getName(), <span class="string">&#x27;is working&#x27;</span>)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(threading.current_thread().getName(), <span class="string">&#x27;is finish&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        t = threading.Thread(target=run, daemon=<span class="literal">True</span>)</span><br><span class="line">        <span class="comment"># Run setDaemon() before the child thread become daemon thread</span></span><br><span class="line">        <span class="comment"># t.setDaemon(True)</span></span><br><span class="line">        t.start()</span><br><span class="line">    </span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Main thread is over&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; threads are alive&#x27;</span>.<span class="built_in">format</span>(threading.active_count()))</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线程锁"><a href="#线程锁" class="headerlink" title="线程锁"></a>线程锁</h3><p>由于线程之间的任务执行是CPU进行随机调度的，并且每个线程可能只执行了n条指令之后就被切换到别的线程了</p>
+<p>当多个线程同时操作一个对象，如果没有很好地保护该对象，会造成程序结果的不可预期，这被称为“线程不安全”</p>
+<p>为了保证数据安全，Python 设计了<strong>线程锁，即同一时刻只允许一个线程操作该数据</strong></p>
+<p>线程锁用于锁定资源，可以同时使用多个锁</p>
+<p>先看看没有线程锁时，数据发生的错乱</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">balance = <span class="number">0</span>     <span class="comment"># If this is your balance from bank</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_it</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">global</span> balance</span><br><span class="line">    balance = balance + n</span><br><span class="line">    balance = balance - n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_thread</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>):</span><br><span class="line">        change_it(n)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t1 = threading.Thread(target=run_thread, args=(<span class="number">5</span>,))</span><br><span class="line">    t2 = threading.Thread(target=run_thread, args=(<span class="number">8</span>,))</span><br><span class="line">    t1.start()</span><br><span class="line">    t2.start()</span><br><span class="line">    t1.join()</span><br><span class="line">    t2.join()</span><br><span class="line">    <span class="built_in">print</span>(balance)</span><br></pre></td></tr></table></figure>
+
+<p>结果并不等于0，可以明显看出数据发生错乱，你当然不愿意你的银行余额变成负数吧</p>
+<h4 id="互斥锁Lock"><a href="#互斥锁Lock" class="headerlink" title="互斥锁Lock"></a>互斥锁Lock</h4><p>如果我们要确保 <code>balance</code> 计算正确，就要给 <code>change_it()</code> 上一把锁，当某个线程开始执行 <code>change_it()</code> 时，我们说，该线程因为获得了锁，因此其他线程不能同时执行 <code>change_it()</code> ，只能等待，直到锁被释放后，获得该锁以后才能改</p>
+<p>由于锁只有一个，无论多少线程，同一时刻最多只有一个线程持有该锁，所以，不会造成修改的冲突</p>
+<p>创建一个锁就是通过 <code>threading.Lock()</code> 来实现：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">balance = <span class="number">0</span></span><br><span class="line">lock = threading.Lock()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_it</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">global</span> balance</span><br><span class="line">    balance = balance + n</span><br><span class="line">    balance = balance - n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_thread</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100000</span>):</span><br><span class="line"></span><br><span class="line">        lock.acquire()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            change_it(n)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            lock.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t1 = threading.Thread(target=run_thread, args=(<span class="number">5</span>,))</span><br><span class="line">    t2 = threading.Thread(target=run_thread, args=(<span class="number">8</span>,))</span><br><span class="line">    t1.start()</span><br><span class="line">    t2.start()</span><br><span class="line">    t1.join()</span><br><span class="line">    t2.join()</span><br><span class="line">    <span class="built_in">print</span>(balance)</span><br></pre></td></tr></table></figure>
+
+<h4 id="信号Semaphore"><a href="#信号Semaphore" class="headerlink" title="信号Semaphore"></a>信号Semaphore</h4><p><code>semaphore</code> 是一个内置的计数器,每当调用 <code>acquire()</code> 时</p>
+<p>内置计数器 -1,每当调用release()时，内置计数器 +1,计数器不能小于<strong>0</strong></p>
+<p>当计数器为<strong>0</strong>时，<code>acquire()</code> 将阻塞线程直到其他线程调用 <code>release()</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;ok&quot;</span>,time.ctime())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">        t = threading.Thread(target=run, args=())</span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，程序会在很短的时间内生成20个线程来打印一句话</p>
+<p>如果在主机执行<strong>IO密集型任务</strong>的时候再执行这种类型的程序时，计算机就有很大可能会宕机。<br>这时候就可以为这段程序添加一个计数器功能，来限制一个时间点内的线程数量。</p>
+<p>运行结果:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">s1 = threading.Semaphore(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    s1.acquire()</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;ok&quot;</span>, time.ctime())</span><br><span class="line">    s1.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">        t1 = threading.Thread(target=run, args=())</span><br><span class="line">        t1.start()</span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br></pre></td></tr></table></figure>
+
+<h4 id="事件Event"><a href="#事件Event" class="headerlink" title="事件Event"></a>事件Event</h4><p>事件线程锁的运行机制：全局定义了一个 <code>Flag</code>，如果 <code>Flag</code> 的值为 <code>False</code>，那么当程序执行 <code>wait()</code> 方法时就会阻塞，如果 <code>Flag</code> 值为 <code>True</code>，线程不再阻塞。这种锁，类似交通红绿灯（默认是红灯），它属于在红灯的时候一次性阻挡所有线程，在绿灯的时候，<strong>一次性放行所有</strong>排队中的线程。</p>
+<ul>
+<li><p><code>clear()</code> 方法会将事件的 <code>Flag</code> 设置为 <code>False</code></p>
+</li>
+<li><p><code>set()</code> 方法会将 <code>Flag</code> 设置为 <code>True</code></p>
+</li>
+<li><p><code>wait()</code> 方法将等待“红绿灯”信号</p>
+</li>
+<li><p><code>is_set()</code> 判断当前是否”绿灯放行”状态</p>
+</li>
+</ul>
+<p>下面是一个模拟红绿灯，然后汽车通行的例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">event = threading.Event()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lighter</span>():</span></span><br><span class="line">    green_time = <span class="number">5</span></span><br><span class="line">    red_time = <span class="number">5</span></span><br><span class="line">    event.<span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\nThe green light ...&#x27;</span>)</span><br><span class="line">        time.sleep(green_time)</span><br><span class="line">        event.clear()</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\nThe red light ...&#x27;</span>)</span><br><span class="line">        time.sleep(red_time)</span><br><span class="line">        event.<span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">name</span>):</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">if</span> event.is_set():</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; roared past&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; arrives, sees the red light and stops&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">            event.wait()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; drove off at the green light&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    light = threading.Thread(target=lighter,)</span><br><span class="line">    light.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> [<span class="string">&#x27;Mercedes&#x27;</span>, <span class="string">&#x27;BMW&#x27;</span>, <span class="string">&#x27;Audi&#x27;</span>]:</span><br><span class="line">        car = threading.Thread(target=run, args=(name,))</span><br><span class="line">        car.start()</span><br></pre></td></tr></table></figure>
+
+<h4 id="条件Condition"><a href="#条件Condition" class="headerlink" title="条件Condition"></a>条件Condition</h4><p><code>Condition</code> 称作条件锁，依然是通过 <code>acquire()/release()</code> 加锁解锁</p>
+<ul>
+<li><p><code>wait([timeout])</code> 方法将使线程进入 <code>Condition</code> 的等待池等待通知，并释放锁。使用前线程必须已获得锁定，否则将抛出异常</p>
+</li>
+<li><p><code>notify()</code> 方法将从等待池挑选一个线程并通知，收到通知的线程将自动调用 <code>acquire()</code> 尝试获得锁定（进入锁定池），其他线程仍然在等待池中。调用这个方法不会释放锁定。使用前线程必须已获得锁定，否则将抛出异常</p>
+</li>
+<li><p><code>notifyAll()</code> 方法将通知等待池中所有的线程，这些线程都将进入锁定池尝试获得锁定，调用这个方法不会释放锁定。使用前线程必须已获得锁定，否则将抛出异常</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">number = <span class="number">0</span></span><br><span class="line">con = threading.Condition()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>(<span class="params">threading.Thread</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, action</span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Foo, self).__init__()</span><br><span class="line">        self.name = name</span><br><span class="line">        self.action = action</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">global</span> number</span><br><span class="line">        con.acquire()</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; is running...&quot;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> self.action == <span class="string">&quot;add&quot;</span>:</span><br><span class="line">                number += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> self.action == <span class="string">&#x27;reduce&#x27;</span>:</span><br><span class="line">                number -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                exit(<span class="number">1</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;number = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(number))</span><br><span class="line"></span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> number == <span class="number">5</span> <span class="keyword">or</span> number == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; is pause&#x27;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line">                con.notify()</span><br><span class="line">                con.wait()</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; is reruning&#x27;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line">        con.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    a = Foo(<span class="string">&quot;thread1&quot;</span>, <span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">    b = Foo(<span class="string">&quot;thread2&quot;</span>, <span class="string">&#x27;reduce&#x27;</span>)</span><br><span class="line">    a.start()</span><br><span class="line">    b.start()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="定时器Timer"><a href="#定时器Timer" class="headerlink" title="定时器Timer"></a>定时器Timer</h4><p>定时器 <code>Timer</code> 类是 <code>threading</code> 模块中的一个小工具，用于指定n秒后执行某操作</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Timer</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;hello, world&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t = Timer(<span class="number">1</span>, hello)  <span class="comment"># One second later</span></span><br><span class="line">    t.start()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="with语句使用线程锁"><a href="#with语句使用线程锁" class="headerlink" title="with语句使用线程锁"></a>with语句使用线程锁</h4><p>在一些“老的” Python 代码中，显式获取和释放锁是很常见的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SharedCounter</span>:</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A counter object that can be shared by multiple threads.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    _lock = threading.RLock()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, initial_value = <span class="number">0</span></span>):</span></span><br><span class="line">        self._value = initial_value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">incr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Increment the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> SharedCounter._lock:</span><br><span class="line">            self._value += delta</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Decrement the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> SharedCounter._lock:</span><br><span class="line">             self.incr(-delta)</span><br></pre></td></tr></table></figure>
+
+<p><code>Lock</code> 对象和 <code>with</code> 语句块一起使用可以保证互斥执行，就是每次只有一个线程可以执行 <code>with</code> 语句包含的代码块。<code>with</code> 语句会在这个代码块执行前自动获取锁，在执行结束后自动释放锁</p>
+<p>相比于上面显式调用的方法，**<code>with</code> 语句更加优雅，也更不容易出错**</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SharedCounter</span>:</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A counter object that can be shared by multiple threads.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, initial_value = <span class="number">0</span></span>):</span></span><br><span class="line">        self._value = initial_value</span><br><span class="line">        self._value_lock = threading.Lock()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">incr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Increment the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> self._value_lock:</span><br><span class="line">             self._value += delta</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Decrement the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> self._value_lock:</span><br><span class="line">             self._value -= delta</span><br></pre></td></tr></table></figure>
+
+<p>[^]: </p>
+<p>参考资料:</p>
+<blockquote>
+<p>刘江的博客教程        <a href="https://www.liujiangblog.com/course/python/79">https://www.liujiangblog.com/course/python/79</a></p>
+<p>廖雪峰的官方网站    <a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017629247922688">https://www.liaoxuefeng.com/wiki/1016959663602400/1017629247922688</a></p>
+<p>Python cookbook    <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p04_locking_critical_sections.html">https://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p04_locking_critical_sections.html</a></p>
+</blockquote>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>threads</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python正则表达式基础篇</title>
+    <url>/2021/05/05/python-re/</url>
+    <content><![CDATA[<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>&amp;nbsp&amp;nbsp有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[]</td>
+<td align="center">匹配的字符的集合</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">脱字符号</td>
+</tr>
+<tr>
+<td align="center">\</td>
+<td align="center">后面跟元字符去除特殊功能，跟普通字符实现特殊功能</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">匹配除了换行符以外的任何字符</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">指定前一个字符匹配零次或者多次</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">指定前一个字符匹配一次期或者多次</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">指定前一个字符匹配零次或一次</td>
+</tr>
+<tr>
+<td align="center">{}</td>
+<td align="center">指定前一个字符必须匹配 m 到 n 次之间</td>
+</tr>
+</tbody></table>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p>&amp;nbsp&amp;nbsp下边列举一些反斜杠加字符构成的特殊含义：</p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\d</td>
+<td>匹配任何十进制数字；相当于类 [0-9]</td>
+</tr>
+<tr>
+<td align="center">\D</td>
+<td>匹配任何非十进制数字的字符；相当于类 [^0-9]</td>
+</tr>
+<tr>
+<td align="center">\s</td>
+<td>匹配任何空白字符(包含空格、换行、制表符等)；相当于类 [\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td align="center">\S</td>
+<td>匹配任何非空白字符；相当于类 [^\t\n\r\f\v]</td>
+</tr>
+<tr>
+<td align="center">\w</td>
+<td>匹配任何单词字符；相当于类 [a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="center">\W</td>
+<td>匹配任何非单词字符；相当于类 [^a-zA-Z0-9_]</td>
+</tr>
+<tr>
+<td align="center">\b</td>
+<td>匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td align="center">\B</td>
+<td>与 \b 相反</td>
+</tr>
+</tbody></table>
+<h2 id="使用正则表达式"><a href="#使用正则表达式" class="headerlink" title="使用正则表达式"></a>使用正则表达式</h2><p>&amp;nbsp&amp;nbsp正则表达式被编译为模式对象，该对象拥有各种方法供你操作字符串，如查找模式匹配或者执行字符替换</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>&amp;nbsp&amp;nbspre.compile() 也可以接受 flags 参数，用于开启各种特殊功能和语法变化</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>, re.IGNORECASE)</span><br></pre></td></tr></table></figure>
+
+<h3 id="实行匹配"><a href="#实行匹配" class="headerlink" title="实行匹配"></a>实行匹配</h3><p>&amp;nbsp&amp;nbsp当你将正则表达式编译之后，你就得到一个模式对象。那你拿他可以用来做什么呢？模式对象拥有很多方法和属性，我们下边列举最重要的几个来讲：</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">match()</td>
+<td>判断一个正则表达式是否从开始处匹配一个字符串</td>
+</tr>
+<tr>
+<td align="center">search()</td>
+<td>遍历字符串，找到正则表达式匹配的第一个位置</td>
+</tr>
+<tr>
+<td align="center">findall()</td>
+<td>遍历字符串，找到正则表达式匹配的所有位置，并以列表的形式返回</td>
+</tr>
+<tr>
+<td align="center">finditer()</td>
+<td>遍历字符串，找到正则表达式匹配的所有位置，并以迭代器的形式返回</td>
+</tr>
+</tbody></table>
+<p>&amp;nbsp&amp;nbsp举个例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p.match(<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 因为 + 表示匹配一次或者多次，所以空字符串不能被匹配，因此，match()返回 None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(p.match(<span class="string">&quot;&quot;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = p.match(<span class="string">&#x27;swordc&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m</span><br><span class="line">&lt;re.Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">6</span>), match=<span class="string">&#x27;swordc&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>&amp;nbsp&amp;nbsp 在这个例子中，match() 返回一个匹配对象，我们将其存放在变量 m 中，以便日后使用。</p>
+<p>&amp;nbsp&amp;nbsp接下来让我们来看看匹配对象里边有哪些信息吧。匹配对象包含了很多方法和属性，以下几个是最重要的：</p>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">group()</td>
+<td>返回匹配的字符串</td>
+</tr>
+<tr>
+<td align="center">start()</td>
+<td>返回匹配的开始位置</td>
+</tr>
+<tr>
+<td align="center">end()</td>
+<td>返回匹配的结束位置</td>
+</tr>
+<tr>
+<td align="center">span()</td>
+<td>返回一个元组表示匹配位置(开始，结束)</td>
+</tr>
+</tbody></table>
+<h3 id="模块级别的函数"><a href="#模块级别的函数" class="headerlink" title="模块级别的函数"></a>模块级别的函数</h3><p>&amp;nbsp&amp;nbsp使用正则表达式也并非一定要创建模式对象，然后调用它的匹配方法。因为，re 模块同时还提供了一些全局函数，例如 match()，search()，findall()，sub() 等等。这些函数的第一个参数是正则表达式字符串，其他参数跟模式对象同名的方法采用一样的参数；返回值也一样，同样是返回 None 或者匹配对象。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From_FishC.com&#x27;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From FishC.com&#x27;</span>)</span><br><span class="line">&lt;_sre.SRE_Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">5</span>), match=<span class="string">&#x27;From &#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译标志"><a href="#编译标志" class="headerlink" title="编译标志"></a>编译标志</h2><table>
+<thead>
+<tr>
+<th>标志</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ASCII,A</td>
+<td>使得转义符号如\w \b \s和\d 只能匹配 ASCII 字符</td>
+</tr>
+<tr>
+<td>DOTALL,S</td>
+<td>使得 . 匹配任何符号，包括换行符</td>
+</tr>
+<tr>
+<td>IGNORECASE,I</td>
+<td>匹配的时候不区分大小写</td>
+</tr>
+<tr>
+<td>LOCALE,L</td>
+<td>支持当前的语言(区域)设置</td>
+</tr>
+<tr>
+<td>MULTILINE,M</td>
+<td>多行匹配，影响 ^ 和 $</td>
+</tr>
+<tr>
+<td>VERBOSE,X(for ‘extended’)</td>
+<td>启用详细的正则表达式</td>
+</tr>
+</tbody></table>
+<p>下面我们来详细讲解一下它们的含义：</p>
+<h3 id="A-ASCII"><a href="#A-ASCII" class="headerlink" title="A    ASCII"></a>A    ASCII</h3><p>使得 \w，\W，\b，\B，\s 和 \S 只匹配 ASCII 字符，而不匹配完整的 Unicode 字符。这个标志仅对 Unicode 模式有意义，并忽略字节模式。</p>
+<h3 id="S-DOTALL"><a href="#S-DOTALL" class="headerlink" title="S    DOTALL"></a>S    DOTALL</h3><p>使得 . 可以匹配任何字符，包括换行符。如果不使用这个标志，. 将匹配除了换行符的所有字符。</p>
+<h3 id="I-IGNORECASE"><a href="#I-IGNORECASE" class="headerlink" title="I    IGNORECASE"></a>I    IGNORECASE</h3><p>字符类和文本字符串在匹配的时候不区分大小写。举个例子，正则表达式 [A-Z] 也将会匹配对应的小写字母，像 FishC 可以匹配 FishC，fishc 或 FISHC 等。如果你不设置 LOCALE，则不会考虑语言（区域）设置这方面的大小写问题。</p>
+<h3 id="L-LOCALE"><a href="#L-LOCALE" class="headerlink" title="L    LOCALE"></a>L    LOCALE</h3><p>使得 \w，\W，\b 和 \B 依赖当前的语言（区域）环境，而不是 Unicode 数据库。</p>
+<p>区域设置是 C 语言的一个功能，主要作用是消除不同语言之间的差异。例如你正在处理的是法文文本，你想使用 \w+ 来匹配单词，但是 \w 只是匹配 [A-Za-z] 中的单词，并不会匹配 ‘é’ 或 ‘&amp;#231;’。如果你的系统正确的设置了法语区域环境，那么 C 语言的函数就会告诉程序 ‘é’ 或 ‘&amp;#231;’ 也应该被认为是一个字符。当编译正则表达式的时候设置了 LOCALE 的标志，\w+ 就可以识别法文了，但速度多少会受到影响。</p>
+<h3 id="M-MULTILINE"><a href="#M-MULTILINE" class="headerlink" title="M MULTILINE"></a>M MULTILINE</h3><p>通常 ^ 只匹配字符串的开头，而 $ 则匹配字符串的结尾。当这个标志被设置的时候，^ 不仅匹配字符串的开头，还匹配每一行的行首；&amp; 不仅匹配字符串的结尾，还匹配每一行的行尾。</p>
+<h3 id="X-VERBOSE"><a href="#X-VERBOSE" class="headerlink" title="X    VERBOSE"></a>X    VERBOSE</h3><p>这个标志使你的正则表达式可以写得更好看和更有条理，因为使用了这个标志，空格会被忽略（除了出现在字符类中和使用反斜杠转义的空格）；这个标志同时允许你在正则表达式字符串中使用注释，# 符号后边的内容是注释，不会递交给匹配引擎（除了出现在字符类中和使用反斜杠转义的 #）。</p>
+<p>下边是使用 re.VERBOSE 的例子，大家看下正则表达式的可读性是不是提高了不少：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">charref = re.<span class="built_in">compile</span>(<span class="string">r&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"> &amp;[#]                # 开始数字引用</span></span><br><span class="line"><span class="string"> (</span></span><br><span class="line"><span class="string">     0[0-7]+         # 八进制格式</span></span><br><span class="line"><span class="string">   | [0-9]+          # 十进制格式</span></span><br><span class="line"><span class="string">   | x[0-9a-fA-F]+   # 十六进制格式</span></span><br><span class="line"><span class="string"> )</span></span><br><span class="line"><span class="string"> ;                   # 结尾分号</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span>, re.VERBOSE)</span><br></pre></td></tr></table></figure>
+
+<p>如果没有设置 VERBOSE 标志，那么同样的正则表达式会写成：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">charref = re.<span class="built_in">compile</span>(<span class="string">&quot;&amp;#(0[0-7]+|[0-9]+|x[0-9a-fA-F]+);&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>哪个可读性更加？相信大家心里有底了。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git基础操作</title>
@@ -371,150 +701,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Python多线程</title>
-    <url>/2020/06/28/python-thread/</url>
-    <content><![CDATA[<h2 id="Python多线程简介"><a href="#Python多线程简介" class="headerlink" title="Python多线程简介"></a>Python多线程简介</h2><ul>
-<li>一个应用程序最少有一个进程，而一个进程有一个或多个线程</li>
-<li>Python提供两个线程标准库 <code> _thread</code>  和 <code>threading</code></li>
-<li>Python适用于I/O密集型，涉及到网络、磁盘I/O的任务，不适用于计算密集型任务</li>
-</ul>
+    <title>Hello World</title>
+    <url>/2000/07/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
 
-<h2 id="Python多线程实例"><a href="#Python多线程实例" class="headerlink" title="Python多线程实例"></a>Python多线程实例</h2><h3 id="基础例子"><a href="#基础例子" class="headerlink" title="基础例子"></a>基础例子</h3><h4 id="通过继承-Thread-类"><a href="#通过继承-Thread-类" class="headerlink" title="通过继承 Thread 类"></a>通过继承 Thread 类</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyThread</span>(<span class="params">threading.Thread</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, thread_name</span>):</span></span><br><span class="line">        <span class="comment"># call the parent class&#x27;s implementation for __init__</span></span><br><span class="line">        <span class="built_in">super</span>(MyThread, self).__init__(name=thread_name)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; is running...&quot;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">        MyThread(<span class="string">&quot;thread &#123;&#125; &quot;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(i))).start()</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h4 id="实例化threading-Thread对象"><a href="#实例化threading-Thread对象" class="headerlink" title="实例化threading.Thread对象"></a>实例化<code>threading.Thread</code>对象</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">arg</span>):</span></span><br><span class="line">    time.sleep(<span class="number">0.5</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;thread &#123;&#125; is running&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(arg)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">        t = threading.Thread(target=run, args=(i,))</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Thread类的常用方法"><a href="#Thread类的常用方法" class="headerlink" title="Thread类的常用方法"></a>Thread类的常用方法</h3><h4 id="join-方法"><a href="#join-方法" class="headerlink" title="join()方法"></a>join()方法</h4><p>Python多线程在执行过程中，每个线程各执行各的任务，不等待其它的线程，自顾自的完成自己的任务</p>
-<p>如果我们希望主线程等子线程完成后再继续执行主线程，就需要调用 <code>join()</code> 方法</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;start run:&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br><span class="line">    time.sleep(<span class="number">3</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;stop run&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br><span class="line"></span><br><span class="line">t = threading.Thread(target=run)</span><br><span class="line">t.start()</span><br><span class="line"></span><br><span class="line">time.sleep(<span class="number">0.5</span>)       <span class="comment"># 等待子线程启动</span></span><br><span class="line">t.join()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;end code&#x27;</span>, time.strftime(<span class="string">&#x27;%H:%M:%S&#x27;</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="setDaemon-方法"><a href="#setDaemon-方法" class="headerlink" title="setDaemon()方法"></a>setDaemon()方法</h4><p>我们可以把<strong>子线程设置成主线程的守护线程</strong>，就是当主线程结束后，守护线程也会结束</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(threading.current_thread().getName(), <span class="string">&#x27;is working&#x27;</span>)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(threading.current_thread().getName(), <span class="string">&#x27;is finish&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        t = threading.Thread(target=run, daemon=<span class="literal">True</span>)</span><br><span class="line">        <span class="comment"># Run setDaemon() before the child thread become daemon thread</span></span><br><span class="line">        <span class="comment"># t.setDaemon(True)</span></span><br><span class="line">        t.start()</span><br><span class="line">    </span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Main thread is over&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; threads are alive&#x27;</span>.<span class="built_in">format</span>(threading.active_count()))</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="线程锁"><a href="#线程锁" class="headerlink" title="线程锁"></a>线程锁</h3><p>由于线程之间的任务执行是CPU进行随机调度的，并且每个线程可能只执行了n条指令之后就被切换到别的线程了</p>
-<p>当多个线程同时操作一个对象，如果没有很好地保护该对象，会造成程序结果的不可预期，这被称为“线程不安全”</p>
-<p>为了保证数据安全，Python 设计了<strong>线程锁，即同一时刻只允许一个线程操作该数据</strong></p>
-<p>线程锁用于锁定资源，可以同时使用多个锁</p>
-<p>先看看没有线程锁时，数据发生的错乱</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">balance = <span class="number">0</span>     <span class="comment"># If this is your balance from bank</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_it</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">global</span> balance</span><br><span class="line">    balance = balance + n</span><br><span class="line">    balance = balance - n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_thread</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>):</span><br><span class="line">        change_it(n)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t1 = threading.Thread(target=run_thread, args=(<span class="number">5</span>,))</span><br><span class="line">    t2 = threading.Thread(target=run_thread, args=(<span class="number">8</span>,))</span><br><span class="line">    t1.start()</span><br><span class="line">    t2.start()</span><br><span class="line">    t1.join()</span><br><span class="line">    t2.join()</span><br><span class="line">    <span class="built_in">print</span>(balance)</span><br></pre></td></tr></table></figure>
-
-<p>结果并不等于0，可以明显看出数据发生错乱，你当然不愿意你的银行余额变成负数吧</p>
-<h4 id="互斥锁Lock"><a href="#互斥锁Lock" class="headerlink" title="互斥锁Lock"></a>互斥锁Lock</h4><p>如果我们要确保 <code>balance</code> 计算正确，就要给 <code>change_it()</code> 上一把锁，当某个线程开始执行 <code>change_it()</code> 时，我们说，该线程因为获得了锁，因此其他线程不能同时执行 <code>change_it()</code> ，只能等待，直到锁被释放后，获得该锁以后才能改</p>
-<p>由于锁只有一个，无论多少线程，同一时刻最多只有一个线程持有该锁，所以，不会造成修改的冲突</p>
-<p>创建一个锁就是通过 <code>threading.Lock()</code> 来实现：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">balance = <span class="number">0</span></span><br><span class="line">lock = threading.Lock()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">change_it</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">global</span> balance</span><br><span class="line">    balance = balance + n</span><br><span class="line">    balance = balance - n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run_thread</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100000</span>):</span><br><span class="line"></span><br><span class="line">        lock.acquire()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            change_it(n)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            lock.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t1 = threading.Thread(target=run_thread, args=(<span class="number">5</span>,))</span><br><span class="line">    t2 = threading.Thread(target=run_thread, args=(<span class="number">8</span>,))</span><br><span class="line">    t1.start()</span><br><span class="line">    t2.start()</span><br><span class="line">    t1.join()</span><br><span class="line">    t2.join()</span><br><span class="line">    <span class="built_in">print</span>(balance)</span><br></pre></td></tr></table></figure>
-
-<h4 id="信号Semaphore"><a href="#信号Semaphore" class="headerlink" title="信号Semaphore"></a>信号Semaphore</h4><p><code>semaphore</code> 是一个内置的计数器,每当调用 <code>acquire()</code> 时</p>
-<p>内置计数器 -1,每当调用release()时，内置计数器 +1,计数器不能小于<strong>0</strong></p>
-<p>当计数器为<strong>0</strong>时，<code>acquire()</code> 将阻塞线程直到其他线程调用 <code>release()</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;ok&quot;</span>,time.ctime())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">        t = threading.Thread(target=run, args=())</span><br><span class="line">        t.start()</span><br></pre></td></tr></table></figure>
-
-<p>运行结果:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br><span class="line">ok Wed Jun 17 16:41:26 2020</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，程序会在很短的时间内生成20个线程来打印一句话</p>
-<p>如果在主机执行<strong>IO密集型任务</strong>的时候再执行这种类型的程序时，计算机就有很大可能会宕机。<br>这时候就可以为这段程序添加一个计数器功能，来限制一个时间点内的线程数量。</p>
-<p>运行结果:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line">s1 = threading.Semaphore(<span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>():</span></span><br><span class="line">    s1.acquire()</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;ok&quot;</span>, time.ctime())</span><br><span class="line">    s1.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">        t1 = threading.Thread(target=run, args=())</span><br><span class="line">        t1.start()</span><br></pre></td></tr></table></figure>
-
-<p>运行结果:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:41 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:43 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:45 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br><span class="line">ok Wed Jun 17 16:48:47 2020</span><br></pre></td></tr></table></figure>
-
-<h4 id="事件Event"><a href="#事件Event" class="headerlink" title="事件Event"></a>事件Event</h4><p>事件线程锁的运行机制：全局定义了一个 <code>Flag</code>，如果 <code>Flag</code> 的值为 <code>False</code>，那么当程序执行 <code>wait()</code> 方法时就会阻塞，如果 <code>Flag</code> 值为 <code>True</code>，线程不再阻塞。这种锁，类似交通红绿灯（默认是红灯），它属于在红灯的时候一次性阻挡所有线程，在绿灯的时候，<strong>一次性放行所有</strong>排队中的线程。</p>
-<ul>
-<li><p><code>clear()</code> 方法会将事件的 <code>Flag</code> 设置为 <code>False</code></p>
-</li>
-<li><p><code>set()</code> 方法会将 <code>Flag</code> 设置为 <code>True</code></p>
-</li>
-<li><p><code>wait()</code> 方法将等待“红绿灯”信号</p>
-</li>
-<li><p><code>is_set()</code> 判断当前是否”绿灯放行”状态</p>
-</li>
-</ul>
-<p>下面是一个模拟红绿灯，然后汽车通行的例子：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">event = threading.Event()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lighter</span>():</span></span><br><span class="line">    green_time = <span class="number">5</span></span><br><span class="line">    red_time = <span class="number">5</span></span><br><span class="line">    event.<span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\nThe green light ...&#x27;</span>)</span><br><span class="line">        time.sleep(green_time)</span><br><span class="line">        event.clear()</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;\nThe red light ...&#x27;</span>)</span><br><span class="line">        time.sleep(red_time)</span><br><span class="line">        event.<span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">name</span>):</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">if</span> event.is_set():</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; roared past&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; arrives, sees the red light and stops&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line">            event.wait()</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;The &#123;&#125; drove off at the green light&#x27;</span>.<span class="built_in">format</span>(name))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    light = threading.Thread(target=lighter,)</span><br><span class="line">    light.start()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> [<span class="string">&#x27;Mercedes&#x27;</span>, <span class="string">&#x27;BMW&#x27;</span>, <span class="string">&#x27;Audi&#x27;</span>]:</span><br><span class="line">        car = threading.Thread(target=run, args=(name,))</span><br><span class="line">        car.start()</span><br></pre></td></tr></table></figure>
-
-<h4 id="条件Condition"><a href="#条件Condition" class="headerlink" title="条件Condition"></a>条件Condition</h4><p><code>Condition</code> 称作条件锁，依然是通过 <code>acquire()/release()</code> 加锁解锁</p>
-<ul>
-<li><p><code>wait([timeout])</code> 方法将使线程进入 <code>Condition</code> 的等待池等待通知，并释放锁。使用前线程必须已获得锁定，否则将抛出异常</p>
-</li>
-<li><p><code>notify()</code> 方法将从等待池挑选一个线程并通知，收到通知的线程将自动调用 <code>acquire()</code> 尝试获得锁定（进入锁定池），其他线程仍然在等待池中。调用这个方法不会释放锁定。使用前线程必须已获得锁定，否则将抛出异常</p>
-</li>
-<li><p><code>notifyAll()</code> 方法将通知等待池中所有的线程，这些线程都将进入锁定池尝试获得锁定，调用这个方法不会释放锁定。使用前线程必须已获得锁定，否则将抛出异常</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">number = <span class="number">0</span></span><br><span class="line">con = threading.Condition()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>(<span class="params">threading.Thread</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, action</span>):</span></span><br><span class="line">        <span class="built_in">super</span>(Foo, self).__init__()</span><br><span class="line">        self.name = name</span><br><span class="line">        self.action = action</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">global</span> number</span><br><span class="line">        con.acquire()</span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125; is running...&quot;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> self.action == <span class="string">&quot;add&quot;</span>:</span><br><span class="line">                number += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> self.action == <span class="string">&#x27;reduce&#x27;</span>:</span><br><span class="line">                number -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                exit(<span class="number">1</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;number = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(number))</span><br><span class="line"></span><br><span class="line">            time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> number == <span class="number">5</span> <span class="keyword">or</span> number == <span class="number">0</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; is pause&#x27;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line">                con.notify()</span><br><span class="line">                con.wait()</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; is reruning&#x27;</span>.<span class="built_in">format</span>(self.name))</span><br><span class="line"></span><br><span class="line">        con.release()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    a = Foo(<span class="string">&quot;thread1&quot;</span>, <span class="string">&#x27;add&#x27;</span>)</span><br><span class="line">    b = Foo(<span class="string">&quot;thread2&quot;</span>, <span class="string">&#x27;reduce&#x27;</span>)</span><br><span class="line">    a.start()</span><br><span class="line">    b.start()</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="定时器Timer"><a href="#定时器Timer" class="headerlink" title="定时器Timer"></a>定时器Timer</h4><p>定时器 <code>Timer</code> 类是 <code>threading</code> 模块中的一个小工具，用于指定n秒后执行某操作</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Timer</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span>():</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;hello, world&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    t = Timer(<span class="number">1</span>, hello)  <span class="comment"># One second later</span></span><br><span class="line">    t.start()</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="with语句使用线程锁"><a href="#with语句使用线程锁" class="headerlink" title="with语句使用线程锁"></a>with语句使用线程锁</h4><p>在一些“老的” Python 代码中，显式获取和释放锁是很常见的</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SharedCounter</span>:</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A counter object that can be shared by multiple threads.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    _lock = threading.RLock()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, initial_value = <span class="number">0</span></span>):</span></span><br><span class="line">        self._value = initial_value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">incr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Increment the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> SharedCounter._lock:</span><br><span class="line">            self._value += delta</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Decrement the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> SharedCounter._lock:</span><br><span class="line">             self.incr(-delta)</span><br></pre></td></tr></table></figure>
-
-<p><code>Lock</code> 对象和 <code>with</code> 语句块一起使用可以保证互斥执行，就是每次只有一个线程可以执行 <code>with</code> 语句包含的代码块。<code>with</code> 语句会在这个代码块执行前自动获取锁，在执行结束后自动释放锁</p>
-<p>相比于上面显式调用的方法，**<code>with</code> 语句更加优雅，也更不容易出错**</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SharedCounter</span>:</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A counter object that can be shared by multiple threads.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, initial_value = <span class="number">0</span></span>):</span></span><br><span class="line">        self._value = initial_value</span><br><span class="line">        self._value_lock = threading.Lock()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">incr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Increment the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> self._value_lock:</span><br><span class="line">             self._value += delta</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decr</span>(<span class="params">self,delta=<span class="number">1</span></span>):</span></span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        Decrement the counter with locking</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="keyword">with</span> self._value_lock:</span><br><span class="line">             self._value -= delta</span><br></pre></td></tr></table></figure>
-
-<p>[^]: </p>
-<p>参考资料:</p>
-<blockquote>
-<p>刘江的博客教程        <a href="https://www.liujiangblog.com/course/python/79">https://www.liujiangblog.com/course/python/79</a></p>
-<p>廖雪峰的官方网站    <a href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017629247922688">https://www.liaoxuefeng.com/wiki/1016959663602400/1017629247922688</a></p>
-<p>Python cookbook    <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p04_locking_critical_sections.html">https://python3-cookbook.readthedocs.io/zh_CN/latest/c12/p04_locking_critical_sections.html</a></p>
-</blockquote>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>threads</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pycharm配置github</title>
-    <url>/2020/07/18/pycharm-git/</url>
-    <content><![CDATA[<p><strong>配置环境前提：</strong></p>
-<ol>
-<li><p>安装git，<a href="https://git-scm.com/downloads">下载链接</a></p>
-</li>
-<li><p>git-ssh配置，<a href="https://git-scm.com/book/zh/v2/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%92%A5">教程</a></p>
-</li>
-<li><p>安装pycharm，下载地址：链接：<a href="https://pan.baidu.com/s/1SkY4nATX92-SYQZwBBxZCw">https://pan.baidu.com/s/1SkY4nATX92-SYQZwBBxZCw</a><br>提取码：v47x <span id="more"></span></p>
-</li>
-</ol>
-<h2 id="设置git"><a href="#设置git" class="headerlink" title="设置git"></a>设置git</h2><p>File -&gt; Settings -&gt; Version Control -&gt; Git</p>
-<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_00.png?raw=true"></p>
-<p>一般情况下，git目录会自动识别</p>
-<h2 id="设置github"><a href="#设置github" class="headerlink" title="设置github"></a>设置github</h2><p>File -&gt; Settings -&gt; Version Control -&gt; GitHub</p>
-<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_01.png?raw=true"></p>
-<h2 id="上传项目到github"><a href="#上传项目到github" class="headerlink" title="上传项目到github"></a>上传项目到github</h2><p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_03.png?raw=true"></p>
-<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_04.png?raw=true"></p>
-<p><img src="https://github.com/guluding/Images/blob/master/pycharm_git_05.png?raw=true"></p>
-<p>上传成功后在 Pycharm 右下方会提示 Successfully shared project on GitHub</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p><a href="https://blog.csdn.net/qq_35203425/article/details/78561039">pycharm环境下将python项目提交到github</a></p>
-<p><a href="https://git-scm.com/book/en/v2">Git Documentation</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
-        <tag>pycharm</tag>
-      </tags>
   </entry>
 </search>
