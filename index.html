@@ -217,7 +217,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-06 11:37:48" itemprop="dateModified" datetime="2021-05-06T11:37:48+08:00">2021-05-06</time>
+                <time title="修改时间：2021-05-06 11:52:05" itemprop="dateModified" datetime="2021-05-06T11:52:05+08:00">2021-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -254,199 +254,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>&amp;nbsp&amp;nbsp有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等</p>
-<table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">[]</td>
-<td align="center">匹配的字符的集合</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">脱字符号</td>
-</tr>
-<tr>
-<td align="center">\</td>
-<td align="center">后面跟元字符去除特殊功能，跟普通字符实现特殊功能</td>
-</tr>
-<tr>
-<td align="center">.</td>
-<td align="center">匹配除了换行符以外的任何字符</td>
-</tr>
-<tr>
-<td align="center">*</td>
-<td align="center">指定前一个字符匹配零次或者多次</td>
-</tr>
-<tr>
-<td align="center">+</td>
-<td align="center">指定前一个字符匹配一次期或者多次</td>
-</tr>
-<tr>
-<td align="center">?</td>
-<td align="center">指定前一个字符匹配零次或一次</td>
-</tr>
-<tr>
-<td align="center">{}</td>
-<td align="center">指定前一个字符必须匹配 m 到 n 次之间</td>
-</tr>
-</tbody></table>
-<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p>&amp;nbsp&amp;nbsp下边列举一些反斜杠加字符构成的特殊含义：</p>
-<table>
-<thead>
-<tr>
-<th align="center">特殊字符</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">\d</td>
-<td>匹配任何十进制数字；相当于类 [0-9]</td>
-</tr>
-<tr>
-<td align="center">\D</td>
-<td>匹配任何非十进制数字的字符；相当于类 [^0-9]</td>
-</tr>
-<tr>
-<td align="center">\s</td>
-<td>匹配任何空白字符(包含空格、换行、制表符等)；相当于类 [\t\n\r\f\v]</td>
-</tr>
-<tr>
-<td align="center">\S</td>
-<td>匹配任何非空白字符；相当于类 [^\t\n\r\f\v]</td>
-</tr>
-<tr>
-<td align="center">\w</td>
-<td>匹配任何单词字符；相当于类 [a-zA-Z0-9_]</td>
-</tr>
-<tr>
-<td align="center">\W</td>
-<td>匹配任何非单词字符；相当于类 [^a-zA-Z0-9_]</td>
-</tr>
-<tr>
-<td align="center">\b</td>
-<td>匹配单词的开始或结束</td>
-</tr>
-<tr>
-<td align="center">\B</td>
-<td>与 \b 相反</td>
-</tr>
-</tbody></table>
-<h2 id="使用正则表达式"><a href="#使用正则表达式" class="headerlink" title="使用正则表达式"></a>使用正则表达式</h2><p>&amp;nbsp&amp;nbsp正则表达式被编译为模式对象，该对象拥有各种方法供你操作字符串，如查找模式匹配或者执行字符替换</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>&amp;nbsp&amp;nbspre.compile() 也可以接受 flags 参数，用于开启各种特殊功能和语法变化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>, re.IGNORECASE)</span><br></pre></td></tr></table></figure>
-
-<h3 id="实行匹配"><a href="#实行匹配" class="headerlink" title="实行匹配"></a>实行匹配</h3><p>&amp;nbsp&amp;nbsp当你将正则表达式编译之后，你就得到一个模式对象。那你拿他可以用来做什么呢？模式对象拥有很多方法和属性，我们下边列举最重要的几个来讲：</p>
-<table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">match()</td>
-<td>判断一个正则表达式是否从开始处匹配一个字符串</td>
-</tr>
-<tr>
-<td align="center">search()</td>
-<td>遍历字符串，找到正则表达式匹配的第一个位置</td>
-</tr>
-<tr>
-<td align="center">findall()</td>
-<td>遍历字符串，找到正则表达式匹配的所有位置，并以列表的形式返回</td>
-</tr>
-<tr>
-<td align="center">finditer()</td>
-<td>遍历字符串，找到正则表达式匹配的所有位置，并以迭代器的形式返回</td>
-</tr>
-</tbody></table>
-<p>&amp;nbsp&amp;nbsp举个例子：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p.match(<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 因为 + 表示匹配一次或者多次，所以空字符串不能被匹配，因此，match()返回 None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(p.match(<span class="string">&quot;&quot;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = p.match(<span class="string">&#x27;swordc&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m</span><br><span class="line">&lt;re.Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">6</span>), match=<span class="string">&#x27;swordc&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p>&amp;nbsp&amp;nbsp 在这个例子中，match() 返回一个匹配对象，我们将其存放在变量 m 中，以便日后使用。</p>
-<p>&amp;nbsp&amp;nbsp接下来让我们来看看匹配对象里边有哪些信息吧。匹配对象包含了很多方法和属性，以下几个是最重要的：</p>
-<table>
-<thead>
-<tr>
-<th align="center">方法</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">group()</td>
-<td>返回匹配的字符串</td>
-</tr>
-<tr>
-<td align="center">start()</td>
-<td>返回匹配的开始位置</td>
-</tr>
-<tr>
-<td align="center">end()</td>
-<td>返回匹配的结束位置</td>
-</tr>
-<tr>
-<td align="center">span()</td>
-<td>返回一个元组表示匹配位置(开始，结束)</td>
-</tr>
-</tbody></table>
-<h3 id="模块级别的函数"><a href="#模块级别的函数" class="headerlink" title="模块级别的函数"></a>模块级别的函数</h3><p>&amp;nbsp&amp;nbsp使用正则表达式也并非一定要创建模式对象，然后调用它的匹配方法。因为，re 模块同时还提供了一些全局函数，例如 match()，search()，findall()，sub() 等等。这些函数的第一个参数是正则表达式字符串，其他参数跟模式对象同名的方法采用一样的参数；返回值也一样，同样是返回 None 或者匹配对象。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From_FishC.com&#x27;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From FishC.com&#x27;</span>)</span><br><span class="line">&lt;_sre.SRE_Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">5</span>), match=<span class="string">&#x27;From &#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="编译标志"><a href="#编译标志" class="headerlink" title="编译标志"></a>编译标志</h2><table>
-<thead>
-<tr>
-<th>标志</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ASCII,A</td>
-<td>使得转义符号如\w \b \s和\d 只能匹配 ASCII 字符</td>
-</tr>
-<tr>
-<td>DOTALL,S</td>
-<td>使得 . 匹配任何符号，包括换行符</td>
-</tr>
-<tr>
-<td>IGNORECASE,I</td>
-<td>匹配的时候不区分大小写</td>
-</tr>
-<tr>
-<td>LOCALE,L</td>
-<td>支持当前的语言(区域)设置</td>
-</tr>
-<tr>
-<td>MULTILINE,M</td>
-<td>多行匹配，影响 ^ 和 $</td>
-</tr>
-<tr>
-<td>VERBOSE,X(for ‘extended’)</td>
-<td>启用详细的正则表达式</td>
-</tr>
-</tbody></table>
-<p>下面我们来详细讲解一下它们的含义：</p>
-<h3 id="A-ASCII"><a href="#A-ASCII" class="headerlink" title="A    ASCII"></a>A    ASCII</h3><p>使得 \w，\W，\b，\B，\s 和 \S 只匹配 ASCII 字符，而不匹配完整的 Unicode 字符。这个标志仅对 Unicode 模式有意义，并忽略字节模式。</p>
-<h3 id="S-DOTALL"><a href="#S-DOTALL" class="headerlink" title="S    DOTALL"></a>S    DOTALL</h3><p>使得 . 可以匹配任何字符，包括换行符。如果不使用这个标志，. 将匹配除了换行符的所有字符。</p>
-<h3 id="I-IGNORECASE"><a href="#I-IGNORECASE" class="headerlink" title="I    IGNORECASE"></a>I    IGNORECASE</h3><p>字符类和文本字符串在匹配的时候不区分大小写。举个例子，正则表达式 [A-Z] 也将会匹配对应的小写字母，像 FishC 可以匹配 FishC，fishc 或 FISHC 等。如果你不设置 LOCALE，则不会考虑语言（区域）设置这方面的大小写问题。</p>
-<h3 id="L-LOCALE"><a href="#L-LOCALE" class="headerlink" title="L    LOCALE"></a>L    LOCALE</h3><p>使得 \w，\W，\b 和 \B 依赖当前的语言（区域）环境，而不是 Unicode 数据库。</p>
-<p>区域设置是 C 语言的一个功能，主要作用是消除不同语言之间的差异。例如你正在处理的是法文文本，你想使用 \w+ 来匹配单词，但是 \w 只是匹配 [A-Za-z] 中的单词，并不会匹配 ‘é’ 或 ‘&amp;#231;’。如果你的系统正确的设置了法语区域环境，那么 C 语言的函数就会告诉程序 ‘é’ 或 ‘&amp;#231;’ 也应该被认为是一个字符。当编译正则表达式的时候设置了 LOCALE 的标志，\w+ 就可以识别法文了，但速度多少会受到影响。</p>
-<h3 id="M-MULTILINE"><a href="#M-MULTILINE" class="headerlink" title="M MULTILINE"></a>M MULTILINE</h3><p>通常 ^ 只匹配字符串的开头，而 $ 则匹配字符串的结尾。当这个标志被设置的时候，^ 不仅匹配字符串的开头，还匹配每一行的行首；&amp; 不仅匹配字符串的结尾，还匹配每一行的行尾。</p>
-<h3 id="X-VERBOSE"><a href="#X-VERBOSE" class="headerlink" title="X    VERBOSE"></a>X    VERBOSE</h3><p>这个标志使你的正则表达式可以写得更好看和更有条理，因为使用了这个标志，空格会被忽略（除了出现在字符类中和使用反斜杠转义的空格）；这个标志同时允许你在正则表达式字符串中使用注释，# 符号后边的内容是注释，不会递交给匹配引擎（除了出现在字符类中和使用反斜杠转义的 #）。</p>
-<p>下边是使用 re.VERBOSE 的例子，大家看下正则表达式的可读性是不是提高了不少：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">charref = re.<span class="built_in">compile</span>(<span class="string">r&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"> &amp;[#]                # 开始数字引用</span></span><br><span class="line"><span class="string"> (</span></span><br><span class="line"><span class="string">     0[0-7]+         # 八进制格式</span></span><br><span class="line"><span class="string">   | [0-9]+          # 十进制格式</span></span><br><span class="line"><span class="string">   | x[0-9a-fA-F]+   # 十六进制格式</span></span><br><span class="line"><span class="string"> )</span></span><br><span class="line"><span class="string"> ;                   # 结尾分号</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span>, re.VERBOSE)</span><br></pre></td></tr></table></figure>
-
-<p>如果没有设置 VERBOSE 标志，那么同样的正则表达式会写成：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">charref = re.<span class="built_in">compile</span>(<span class="string">&quot;&amp;#(0[0-7]+|[0-9]+|x[0-9a-fA-F]+);&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>哪个可读性更加？相信大家心里有底了。</p>
-
+          <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/05/python-re/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

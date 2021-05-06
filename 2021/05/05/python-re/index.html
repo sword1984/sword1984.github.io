@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="元字符&amp;nbsp&amp;nbsp有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等    符号 描述    [] 匹配的字符的集合   ^ 脱字符号   \ 后面跟元字符去除特殊功能，跟普通字符实现特殊功能   . 匹配除了换行符以外的任何字符   * 指定前一个字符匹配零次或者多次   + 指定前一个字符匹配一">
+  <meta name="description" content="元字符有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python正则表达式基础篇">
 <meta property="og:url" content="http://example.com/2021/05/05/python-re/index.html">
 <meta property="og:site_name" content="说话之岛">
-<meta property="og:description" content="元字符&amp;nbsp&amp;nbsp有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等    符号 描述    [] 匹配的字符的集合   ^ 脱字符号   \ 后面跟元字符去除特殊功能，跟普通字符实现特殊功能   . 匹配除了换行符以外的任何字符   * 指定前一个字符匹配零次或者多次   + 指定前一个字符匹配一">
+<meta property="og:description" content="元字符有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-05T08:43:00.000Z">
-<meta property="article:modified_time" content="2021-05-06T03:37:48.438Z">
+<meta property="article:modified_time" content="2021-05-06T03:52:05.512Z">
 <meta property="article:author" content="Sword">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-06 11:37:48" itemprop="dateModified" datetime="2021-05-06T11:37:48+08:00">2021-05-06</time>
+                <time title="修改时间：2021-05-06 11:52:05" itemprop="dateModified" datetime="2021-05-06T11:52:05+08:00">2021-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,7 +256,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>&amp;nbsp&amp;nbsp有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等</p>
+        <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p>有少数特殊的字符我们称之为元字符（metacharacter），它们并不能匹配自身，它们定义了字符类、子组匹配和模式重复次数等<span id="more"></span></p>
 <table>
 <thead>
 <tr>
@@ -297,7 +297,7 @@
 <td align="center">指定前一个字符必须匹配 m 到 n 次之间</td>
 </tr>
 </tbody></table>
-<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p>&amp;nbsp&amp;nbsp下边列举一些反斜杠加字符构成的特殊含义：</p>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><p>下边列举一些反斜杠加字符构成的特殊含义：</p>
 <table>
 <thead>
 <tr>
@@ -338,13 +338,13 @@
 <td>与 \b 相反</td>
 </tr>
 </tbody></table>
-<h2 id="使用正则表达式"><a href="#使用正则表达式" class="headerlink" title="使用正则表达式"></a>使用正则表达式</h2><p>&amp;nbsp&amp;nbsp正则表达式被编译为模式对象，该对象拥有各种方法供你操作字符串，如查找模式匹配或者执行字符替换</p>
+<h2 id="使用正则表达式"><a href="#使用正则表达式" class="headerlink" title="使用正则表达式"></a>使用正则表达式</h2><p>正则表达式被编译为模式对象，该对象拥有各种方法供你操作字符串，如查找模式匹配或者执行字符替换</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>&amp;nbsp&amp;nbspre.compile() 也可以接受 flags 参数，用于开启各种特殊功能和语法变化</p>
+<p>re.compile() 也可以接受 flags 参数，用于开启各种特殊功能和语法变化</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;ab*&#x27;</span>, re.IGNORECASE)</span><br></pre></td></tr></table></figure>
 
-<h3 id="实行匹配"><a href="#实行匹配" class="headerlink" title="实行匹配"></a>实行匹配</h3><p>&amp;nbsp&amp;nbsp当你将正则表达式编译之后，你就得到一个模式对象。那你拿他可以用来做什么呢？模式对象拥有很多方法和属性，我们下边列举最重要的几个来讲：</p>
+<h3 id="实行匹配"><a href="#实行匹配" class="headerlink" title="实行匹配"></a>实行匹配</h3><p>当你将正则表达式编译之后，你就得到一个模式对象。那你拿他可以用来做什么呢？模式对象拥有很多方法和属性，我们下边列举最重要的几个来讲：</p>
 <table>
 <thead>
 <tr>
@@ -369,11 +369,11 @@
 <td>遍历字符串，找到正则表达式匹配的所有位置，并以迭代器的形式返回</td>
 </tr>
 </tbody></table>
-<p>&amp;nbsp&amp;nbsp举个例子：</p>
+<p>举个例子：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> re</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p</span><br><span class="line">re.<span class="built_in">compile</span>(<span class="string">&#x27;[a-z]+&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>p.match(<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># 因为 + 表示匹配一次或者多次，所以空字符串不能被匹配，因此，match()返回 None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(p.match(<span class="string">&quot;&quot;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m = p.match(<span class="string">&#x27;swordc&#x27;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>m</span><br><span class="line">&lt;re.Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">6</span>), match=<span class="string">&#x27;swordc&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
 
-<p>&amp;nbsp&amp;nbsp 在这个例子中，match() 返回一个匹配对象，我们将其存放在变量 m 中，以便日后使用。</p>
-<p>&amp;nbsp&amp;nbsp接下来让我们来看看匹配对象里边有哪些信息吧。匹配对象包含了很多方法和属性，以下几个是最重要的：</p>
+<p> 在这个例子中，match() 返回一个匹配对象，我们将其存放在变量 m 中，以便日后使用。</p>
+<p>接下来让我们来看看匹配对象里边有哪些信息吧。匹配对象包含了很多方法和属性，以下几个是最重要的：</p>
 <table>
 <thead>
 <tr>
@@ -398,7 +398,7 @@
 <td>返回一个元组表示匹配位置(开始，结束)</td>
 </tr>
 </tbody></table>
-<h3 id="模块级别的函数"><a href="#模块级别的函数" class="headerlink" title="模块级别的函数"></a>模块级别的函数</h3><p>&amp;nbsp&amp;nbsp使用正则表达式也并非一定要创建模式对象，然后调用它的匹配方法。因为，re 模块同时还提供了一些全局函数，例如 match()，search()，findall()，sub() 等等。这些函数的第一个参数是正则表达式字符串，其他参数跟模式对象同名的方法采用一样的参数；返回值也一样，同样是返回 None 或者匹配对象。</p>
+<h3 id="模块级别的函数"><a href="#模块级别的函数" class="headerlink" title="模块级别的函数"></a>模块级别的函数</h3><p>使用正则表达式也并非一定要创建模式对象，然后调用它的匹配方法。因为，re 模块同时还提供了一些全局函数，例如 match()，search()，findall()，sub() 等等。这些函数的第一个参数是正则表达式字符串，其他参数跟模式对象同名的方法采用一样的参数；返回值也一样，同样是返回 None 或者匹配对象。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From_FishC.com&#x27;</span>))</span><br><span class="line"><span class="literal">None</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>re.match(<span class="string">r&#x27;From\s+&#x27;</span>, <span class="string">&#x27;From FishC.com&#x27;</span>)</span><br><span class="line">&lt;_sre.SRE_Match <span class="built_in">object</span>; span=(<span class="number">0</span>, <span class="number">5</span>), match=<span class="string">&#x27;From &#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="编译标志"><a href="#编译标志" class="headerlink" title="编译标志"></a>编译标志</h2><table>
