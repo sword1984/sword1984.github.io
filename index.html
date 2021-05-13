@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-13 17:38:00 / 修改时间：17:39:06" itemprop="dateCreated datePublished" datetime="2021-05-13T17:38:00+08:00">2021-05-13</time>
+              <time title="创建时间：2021-05-13 17:38:00 / 修改时间：17:49:18" itemprop="dateCreated datePublished" datetime="2021-05-13T17:38:00+08:00">2021-05-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,86 +248,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port=<span class="number">3306</span>,</span><br><span class="line">    user=<span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    passwd=<span class="string">&#x27;password&#x27;</span>,</span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>,</span><br><span class="line">    autocommit=<span class="literal">True</span>,</span><br><span class="line">    database=<span class="string">&#x27;test&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">mycursor = db.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查数据库是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW DATABASES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p><code>autocommit=True</code>相当于每次执行 <code>db.commit()</code></p>
-<h2 id="创建表-CREATE"><a href="#创建表-CREATE" class="headerlink" title="创建表(CREATE)"></a>创建表(CREATE)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;&quot;&quot;CREATE TABLE table_name(</span></span><br><span class="line"><span class="string">      id INT AUTO_INCREMENT PRIMARY KEY,</span></span><br><span class="line"><span class="string">      name VARCHAR(20),</span></span><br><span class="line"><span class="string">      sex VARCHAR(4),</span></span><br><span class="line"><span class="string">      age INT(4),</span></span><br><span class="line"><span class="string">      adress VARCHAR(255)</span></span><br><span class="line"><span class="string">      )DEFAULT CHARSET=utf8&quot;&quot;&quot;</span></span><br><span class="line">      </span><br><span class="line">mycursor.execute(sql)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查表是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW TABLES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改选项语法"><a href="#修改选项语法" class="headerlink" title="修改选项语法"></a>修改选项语法</h3><p><code>ALTER TABLE</code>  语句可以改变原有表的结构，例如增加或删减列、更改原有列类型、重新命名列或表等。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 在已有的表上添加主键</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name ADD COLUMN(phone INT(10))&quot;)</span><br><span class="line"># 修改表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name MODIFY COLUMN(phone INT(11))&quot;)</span><br><span class="line"># 删除表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name DROP COLUMN phone&quot;)</span><br><span class="line"># 表重命名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name RENAME TO table1&quot;)</span><br></pre></td></tr></table></figure>
-
-<p><code>DEFAULT CHARSET=utf8</code> 设置 <code>utf8</code> 编码以免出现中文乱码</p>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>规定了列可容纳何种数据类型（data_type）。下面的表格包含了<code>SQL</code>中最常用的数据类型：</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>integer(size)<br>int(size)<br>smallint(size)<br>tinyint(size)</td>
-<td>仅容纳整数。<br>在括号内规定数字的最大位数</td>
-</tr>
-<tr>
-<td>decimal(size,d)<br>numeric(size,d)</td>
-<td>容纳带有小数的数字。<br>“size”规定数字的最大位数，”d”规定小数点右侧的最大位数。</td>
-</tr>
-<tr>
-<td>char(size)</td>
-<td>容纳固定长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度</td>
-</tr>
-<tr>
-<td>varchar(size)</td>
-<td>容纳可变长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度。</td>
-</tr>
-<tr>
-<td>date(yyyymmdd)</td>
-<td>容纳日期</td>
-</tr>
-</tbody></table>
-<h2 id="插入表-INSERT"><a href="#插入表-INSERT" class="headerlink" title="插入表(INSERT)"></a>插入表(INSERT)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;小帅&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;北京市朝阳区&#x27;</span>, <span class="string">&#x27;13854385438&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
-
-<h3 id="插入多行"><a href="#插入多行" class="headerlink" title="插入多行"></a>插入多行</h3><p>要在表中插入多行，请使用 <code>executemany()</code> 方法。</p>
-<p><code>executemany()</code> 方法的第二个参数是元组列表，包含要插入的数据：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = [</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小李&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;21&#x27;</span>, <span class="string">&#x27;成都市双流区&#x27;</span>, <span class="string">&#x27;18756548875&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;张大&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;13965456654&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小樱&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;重庆市XX路&#x27;</span>, <span class="string">&#x27;188654578852&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>)</span><br><span class="line">]</span><br><span class="line">mycursor.executemany(sql, val)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;最后插入的一行: &#123;&#125;&#x27;</span>.fromat(mycursor.lastrowid))</span><br></pre></td></tr></table></figure>
-
-<p>您可以通过询问 <code>mycursor.lastrowid</code> 对象来获取刚插入的行的 id。</p>
-<p><strong>注释：</strong>如果插入不止一行，则返回最后插入行的 id。</p>
-<h2 id="选择表内容-SELECT"><a href="#选择表内容-SELECT" class="headerlink" title="选择表内容(SELECT)"></a>选择表内容(<code>SELECT</code>)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br></pre></td></tr></table></figure>
-
-<h3 id="选取指定内容"><a href="#选取指定内容" class="headerlink" title="选取指定内容"></a>选取指定内容</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT name, adress FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回结果的第一行</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(mycursor.fetchone())</span><br></pre></td></tr></table></figure>
-
-<h2 id="筛选器选取-WHERE"><a href="#筛选器选取-WHERE" class="headerlink" title="筛选器选取(WHERE)"></a>筛选器选取(<code>WHERE</code>)</h2><p>选择地址为 “上海市虹桥区” 的记录</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress =&#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符(%)"></a>通配符(<code>%</code>)</h3><p>您也可以选择以给定字母或短语开头、包含或结束的记录。</p>
-<p>请使用 <code>％</code> 表示通配符：</p>
-<p>选择以 “区” 结尾的地区</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress LIKE &#x27;%区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="结果排序-ORDER-BY"><a href="#结果排序-ORDER-BY" class="headerlink" title="结果排序(ORDER BY)"></a>结果排序(<code>ORDER BY</code>)</h2><p><code>ORDER BY</code> 关键字默认按升序对结果进行排序。若要按降序对结果进行排序，请使用 <code>DESC</code> 关键字。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># DESC 关键字按降序对结果进行排序</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age DESC&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除记录-DELETE"><a href="#删除记录-DELETE" class="headerlink" title="删除记录(DELETE)"></a>删除记录(<code>DELETE</code>)</h2><p>请注意 DELETE 语法中的 WHERE 子句：WHERE 子句指定应删除哪些记录。如果省略 WHERE 子句，则将删除所有记录！</p>
-<p>删除姓名 “有容” 的列</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = &#x27;有容&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除表-DROP-TABLE"><a href="#删除表-DROP-TABLE" class="headerlink" title="删除表(DROP TABLE)"></a>删除表(<code>DROP TABLE</code>)</h2><p>删除 “table_name” 表：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;DROP TABLE table_name&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要删除的表已被删除，或者由于任何其他原因不存在，那么可以使用 IF EXISTS 关键字以避免出错</span></span><br><span class="line">sql = <span class="string">&quot;DROP TABLE IF EXISTS table_name&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新表-UPDATE"><a href="#更新表-UPDATE" class="headerlink" title="更新表(UPDATE)"></a>更新表(<code>UPDATE</code>)</h2><p>把地址列中的 “上海市虹桥区” 覆盖为 “上海市黄浦区”：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = &#x27;上海市黄浦区&#x27; WHERE adress = &#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="限制查询返回记录数-LIMIT"><a href="#限制查询返回记录数-LIMIT" class="headerlink" title="限制查询返回记录数(LIMIT)"></a>限制查询返回记录数(<code>LIMIT</code>)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 5&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从位置 2 开始返回 2 条记录</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 2 OFFSET 2&quot;</span>)</span><br><span class="line"></span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="防止-SQL-注入"><a href="#防止-SQL-注入" class="headerlink" title="防止 SQL 注入"></a>防止 <code>SQL</code> 注入</h2><p>当用户提供查询值时，您应该转义这些值。</p>
-<p>此举是为了防止 <code>SQL</code> 注入，这是一种常见的网络黑客技术，可以破坏或滥用您的数据库。</p>
-<p><code>mysql.connector</code> 模块拥有转义查询值的方法：</p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用占位符 ％s 方法来转义查询值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># where 筛选</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress = %s&quot;</span></span><br><span class="line">adr = (<span class="string">&#x27;上海市虹桥区&#x27;</span>, )</span><br><span class="line">mycursor.execute(sql, adr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete 删除记录</span></span><br><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = %s&quot;</span></span><br><span class="line">name = (<span class="string">&#x27;有容&#x27;</span>,)</span><br><span class="line">mycursor.execute(sql, name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update 更新记录</span></span><br><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = %s WHERE adress = %s&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;上海市黄浦区&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
-
-
+          <h2 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h2><p><code>autocommit=True</code>相当于每次执行 <code>db.commit()</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/13/python-mysql/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
