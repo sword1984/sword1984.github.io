@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo搭建和备份</title>
+    <url>/2020/07/01/hexo-backup/</url>
+    <content><![CDATA[<p>由于更换电脑和系统造成博客没有持续进行下去，所以要解决在不同电脑维护、配置、找回博客内容。</p>
+<p>总结得到以下两种方法：</p>
+<ol>
+<li>通过 GIT 使用不同分支存储不同的内容<ul>
+<li>生成静态网页</li>
+<li>整个驱动程序</li>
+</ul>
+</li>
+<li>通过 onedrive 同步 <span id="more"></span></li>
+</ol>
+<h2 id="Hexo-搭建"><a href="#Hexo-搭建" class="headerlink" title="Hexo 搭建"></a>Hexo 搭建</h2><h3 id="安装-GIT"><a href="#安装-GIT" class="headerlink" title="安装 GIT"></a><a href="https://git-scm.com/book/en/v2">安装 GIT</a></h3><p>git <a href="https://git-scm.com/downloads">下载地址</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Ubuntu system</span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><a href="https://hexo.io/">安装 Hexo</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># initiallzation</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line"># Install related plug-ins</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Hexo-备份"><a href="#Hexo-备份" class="headerlink" title="Hexo 备份"></a>Hexo 备份</h2><h3 id="使用-OneDrive"><a href="#使用-OneDrive" class="headerlink" title="使用 OneDrive"></a>使用 OneDrive</h3><p>如果你需要更换系统或设备, 只需同步 OneDrive 后, 安装<code>git</code> <code>node</code> <code>npm</code> <code>hexo</code> 以及进入目录安装相关插件 <code>npm install </code>,最好使用 Linux 系统,我个人是在 Win10 安装碰到各种坑</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2000/07/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>BurpSuite破解安装</title>
     <url>/2020/07/11/burpsuite-install/</url>
     <content><![CDATA[<h2 id="Burpsuite简介"><a href="#Burpsuite简介" class="headerlink" title="Burpsuite简介"></a>Burpsuite简介</h2><p>BurpSuite 是用于攻击web应用程序的集成平台。它包含了许多工具，并为这些工具设计了许多接口，以促进加快攻击应用程序的过程。</p>
@@ -78,39 +134,240 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo搭建和备份</title>
-    <url>/2020/07/01/hexo-backup/</url>
-    <content><![CDATA[<p>由于更换电脑和系统造成博客没有持续进行下去，所以要解决在不同电脑维护、配置、找回博客内容。</p>
-<p>总结得到以下两种方法：</p>
-<ol>
-<li>通过 GIT 使用不同分支存储不同的内容<ul>
-<li>生成静态网页</li>
-<li>整个驱动程序</li>
+    <title>Git基础操作</title>
+    <url>/2020/07/08/git-commands/</url>
+    <content><![CDATA[<p>本文针对初级用户，从最简单的讲起，但是需要读者对 <code>git</code> 基本用法有所了解。</p>
+<h2 id="Git-基本概念"><a href="#Git-基本概念" class="headerlink" title="Git 基本概念"></a>Git 基本概念</h2><p>我们先来理解下 Git 工作区、暂存区和版本库概念</p>
+<ul>
+<li><strong>工作区</strong>：就是人在电脑里能看到的目录</li>
+<li><strong>暂存区</strong>：英文叫 stage，或 index。一般存放在 “.git目录” 下的 index 文件(.git/index)中，所以我们把暂存区有时也叫作索引(index)。</li>
+<li><strong>版本库</strong>：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。</li>
 </ul>
-</li>
-<li>通过 onedrive 同步 <span id="more"></span></li>
-</ol>
-<h2 id="Hexo-搭建"><a href="#Hexo-搭建" class="headerlink" title="Hexo 搭建"></a>Hexo 搭建</h2><h3 id="安装-GIT"><a href="#安装-GIT" class="headerlink" title="安装 GIT"></a><a href="https://git-scm.com/book/en/v2">安装 GIT</a></h3><p>git <a href="https://git-scm.com/downloads">下载地址</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的GitHub注册邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+ <span id="more"></span>
+
+<p>下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系。</p>
+<p><img src="https://github.com/guluding/Images/blob/master/git_diagram.jpg?raw=true"></p>
+<p>图中的 objects 标识的区域为 Git 的对象库，实际位于 <code>.git/objects</code> 目录下，里面包含了创建的各种对象及内容。</p>
+<h2 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h2><h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><p>用 <code>git init</code> 在目录中创建新的 Git 仓库，你可以在任何时候、任何目录中这么做，完全是本地化的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir guluding</span><br><span class="line">$ cd guluding&#x2F;</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in &#x2F;home&#x2F;cj&#x2F;guluding&#x2F;.git&#x2F;</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Ubuntu system</span><br><span class="line">sudo apt update &amp;&amp; sudo apt upgrade -y</span><br><span class="line">sudo apt install nodejs</span><br><span class="line">sudo apt install npm</span><br></pre></td></tr></table></figure>
+<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p><code>git add</code> 命令可将该文件添加到缓存，如我们添加以下两个文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ touch README</span><br><span class="line">$ touch hello.py</span><br><span class="line">$ git status -s</span><br><span class="line">?? README</span><br><span class="line">?? hello.py</span><br></pre></td></tr></table></figure>
+
+<p><code>git status</code> 命令用于查看项目的当前状态。</p>
+<p>接下来我们执行 <code>git add</code> 命令来添加文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add README hello.py</span><br></pre></td></tr></table></figure>
+
+<p>现在我们再执行 <code>git status</code> ，就可以看到这两个文件已经加上去了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
+
+<p>新项目中，添加所有文件很普遍，我们可以使用 <code>git add .</code> 命令来添加当前项目的所有文件。</p>
+<p>现在我们修改 README 文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vim README</span><br></pre></td></tr></table></figure>
+
+<p>在 README 添加任意内容后保存退出。</p>
+<p>再执行一下 <code>git status</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
+
+<p><code>AM</code> 状态的意思是，这个文件在我们将它添加到缓存之后又有改动。改动后我们再执行 <code>git add</code> 命令将其添加到缓存中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
+
+<p>当你将你的修改包含在即将提交的快照里的时候，需要执行 <code>git add</code></p>
+<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><p><code>git status</code> 以查看在你上次提交之后是否有修改。</p>
+<p>上例演示该命令的时候加了 <code>-s</code> 参数，以获得简短的结果输出。如果没加该参数会详细输出内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 取消 hello.py 的缓存，以便查看两个文件不同的提示</span><br><span class="line">$ git reset HEAD -- hello.py</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span><br><span class="line">        new file:   README</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line">        hello.py</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a><a href="https://hexo.io/">安装 Hexo</a></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># install hexo</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"># initiallzation</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line"># Install related plug-ins</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><p>执行 <code>git diff</code> 来查看执行 <code>git status</code> 的结果的详细信息。</p>
+<p><code>git diff</code> 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。<code>git diff</code> 有两个主要的应用场景。</p>
+<ul>
+<li>尚未缓存的改动：<code>git diff</code></li>
+<li>查看已缓存的改动：<code>git dif  --cached</code></li>
+<li>查看已缓存的与未缓存的所有改动：<code>git diff HEAD</code></li>
+<li>显示摘要而非整个 diff：<code>git diff --stat</code></li>
+</ul>
+<p>修改 `README’ 后执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">index 5bd35b1..72ca035 100644</span><br><span class="line">--- a&#x2F;README</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -1,2 +1,3 @@</span><br><span class="line"> This is a test file</span><br><span class="line"> use before look at this.</span><br><span class="line">+However it is not any useful.</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们来查看下 <code>git diff --cached</code> 的执行效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">index 5bd35b1..72ca035 100644</span><br><span class="line">--- a&#x2F;README</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -1,2 +1,3 @@</span><br><span class="line"> This is a test file</span><br><span class="line"> use before look at this.</span><br><span class="line">+However it is not any useful.</span><br><span class="line">cj@DESKTOP-O39JCF4:~&#x2F;guluding$ git diff --cached</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..5bd35b1</span><br><span class="line">--- &#x2F;dev&#x2F;null</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -0,0 +1,2 @@</span><br><span class="line">+This is a test file</span><br><span class="line">+use before look at this.</span><br><span class="line">diff --git a&#x2F;hello.py b&#x2F;hello.py</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..96e1727</span><br><span class="line">--- &#x2F;dev&#x2F;null</span><br><span class="line">+++ b&#x2F;hello.py</span><br><span class="line">@@ -0,0 +1,2 @@</span><br><span class="line">+print(&#39;Hello World&#39;)</span><br><span class="line">+</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Hexo-备份"><a href="#Hexo-备份" class="headerlink" title="Hexo 备份"></a>Hexo 备份</h2><h3 id="使用-OneDrive"><a href="#使用-OneDrive" class="headerlink" title="使用 OneDrive"></a>使用 OneDrive</h3><p>如果你需要更换系统或设备, 只需同步 OneDrive 后, 安装<code>git</code> <code>node</code> <code>npm</code> <code>hexo</code> 以及进入目录安装相关插件 <code>npm install </code>,最好使用 Linux 系统,我个人是在 Win10 安装碰到各种坑</p>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>使用 <code>git add</code> 命令将想要快照的内容写入缓存区，而执行 <code>git commit</code> 将缓存区内容添加到仓库中。</p>
+<p>Git 为你的每一个提交都记录你的名字与电子邮箱地址，所以第一步需要配置用户名和邮箱地址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &#39;username&#39;</span><br><span class="line">$ git config --global user.email &#39;youremail&#39;</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们提交，我们使用 <code>-m</code> 选项以在命令行中提交注释。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &#39;First commit&#39;</span><br><span class="line">[master (root-commit) 5aa5775] First commit</span><br><span class="line"> 2 files changed, 4 insertions(+)</span><br><span class="line"> create mode 100644 README</span><br><span class="line"> create mode 100644 hello.py</span><br></pre></td></tr></table></figure>
+
+<p>现在我们已经记录了快照。如果我们再执行 <code>git status</code>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>以上输出说明我们在最近一提交之后，没有做任何改改，是一个 <code>working directory clean: 干净的工作目录</code>。</p>
+<p>如果你觉得 <code>git add</code> 提交缓存的流程太过繁琐，Git 也允许你用 <code>-a</code> 选项路过这一步。命令格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -am &#39;修改 hell.py 文件&#39;</span><br><span class="line">[master c349302] 修改 hell.py 文件</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="git-reset-HEAD"><a href="#git-reset-HEAD" class="headerlink" title="git reset HEAD"></a>git reset HEAD</h3><p><code>git reset HEAD</code> 命令用于取消已缓存的内容。</p>
+<p>我们先将 README 和 hello.py 做任意修改：</p>
+<p>现在两个文件修改后，都提交到缓存区，我们取消其中一个缓存，操作如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">AM hello.py</span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br><span class="line">$ git reset HEAD -- hello.py</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">?? hello.py</span><br></pre></td></tr></table></figure>
+
+<p>简而言之，执行 <code>git reset HEAD -- &lt;file&gt;</code> 取消之前 <code>git add </code> 添加，但不希望包含在下一提交快照中的缓存。</p>
+<h3 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h3><p>如果只是简单地从工作目录中手工删除文件，运行 <code>git status</code> 时就会在 <code>changes not staged for commit</code> 的提示。</p>
+<p>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 <code>-f</code> </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm -f &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果把文件从暂存区域移除，但仍希望保留在当前工作目录中，换句话说，公是从跟踪清单中删除，使用 <code>--cached</code> 选项即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm --cached &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<p>可以递归删除，即如果后面跟的是一个目录做为参数，则会递归删除整个目录中的所有子目录和文件：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm -r *</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="git-mv"><a href="#git-mv" class="headerlink" title="git mv"></a>git mv</h3><p><code>git mv</code> 命令用于移动或重命名一个文件、目录、软连接。</p>
+<p>我们将 README 重名为 README.md：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git mv README README.md</span><br></pre></td></tr></table></figure>
+
+<h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><p><img src="https://github.com/guluding/Images/blob/master/git_base.jpg?raw=true"></p>
+<h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p>远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到 <code>git clone</code> 命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
+
+<p>该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为 <code>git clone</code> 命令的第二个参数.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;url&gt; [&lt;dir&gt;]</span><br></pre></td></tr></table></figure>
+
+<p> <code>git clone</code> 支持多种协议，除了 <strong>http(s)</strong> 以外，还支持 <strong>ssh、git、本地文件协议等</strong>，通常来说， git 协议下载速度最快，ssh 协议用于需要用户认证的场合</p>
+<h3 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h3><p>为了方便管理，Git 要求每个远程不知主机都必须指定一个主机名。<code>git remote</code> 命令就用于管理主机名。</p>
+<p>不带选项的时候，<code>git remote</code> 命令列出所有远程主机。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>-v</code> 选项，可以参看远程的网址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git@github.com:username&#x2F;repository.git (fetch)</span><br><span class="line">origin  git@github.com:username&#x2F;repository.git (push)</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，当前只有一台远程主机，叫做 <code>origin</code>，以及它的网址</p>
+<p>克隆版本库的时候，所使用的远程主机自动被 Git 命名为 <code>origin</code> 。如果想用其它的主机名，需要用 <code>git clone</code> 命令的 <code>-o</code> 选项指定。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone -o jQuery https:&#x2F;&#x2F;github.com&#x2F;jquery&#x2F;jquery.git</span><br><span class="line">$ git remote</span><br><span class="line">jQuery</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，克隆的时候，指定远程主机叫做 jQuery</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 加上主机名，可以查看该主机的详细信息。</span><br><span class="line">$ git remote show &lt;主机名&gt;</span><br><span class="line"></span><br><span class="line"># 添加远程主机</span><br><span class="line">$ git remote add &lt;主机名&gt; &lt;网址&gt;</span><br><span class="line"></span><br><span class="line"># 删除远程主机</span><br><span class="line">$ git remote rm &lt;主机名&gt;</span><br><span class="line"></span><br><span class="line"># 远程主机的改名</span><br><span class="line">$ git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h3><p>一旦远程主机的版本有了更新(Git 术语叫做 commit)，需要将这些取回本地，这时就要用到 <code>git fetch</code> 命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch &lt;远程主机名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上面命令将某个远程主机的更新，全部取回本地。</p>
+<p><code>git fetch</code> 命令通常用来查看其它人的进程，因为它取回的代码对你本地的开发代码没有影响。</p>
+<p>默认情况下，<code>git fetch</code> 取回所有分支的更新。如果只想取回特定分支的更新，可以指定分支名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如 <code>origin</code> 主机的 <code>master</code> ，就要用 <code>origin/master</code> 读取。</p>
+<p><code>git branch</code> 命令的 <code>-r</code> 选项，可以用来查看远程分支，<code>-a</code> 选项查看所有分支。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch -r</span><br><span class="line">origin&#x2F;master</span><br><span class="line"></span><br><span class="line">$ git branch -a</span><br><span class="line">* master</span><br><span class="line">  remotes&#x2F;origin&#x2F;master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，本地主机的当前分支是 <code>master</code> ，远程分支是 <code>origin/master</code></p>
+<p>取回远程主机的更新以后，可以在它的基础上，使用 <code>git checkout</code> 命令创建一个新的分支。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b newBrach origin&#x2F;master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，在 <code>origin/master</code> 的基础上，创建一个新分支。</p>
+<p>此外，也可以使用 <code>git merge</code> 命令或者 <code>git rebase</code> 命令，在本地分支上合并远程分支。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git merge origin&#x2F;master</span><br><span class="line"># 或者</span><br><span class="line">$ git rebase origin&#x2F;master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示在当前分支上，合并 <code>origin/master</code> 。</p>
+<h3 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h3><p><code>git pull</code> 命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如，取回 <code>origin</code> 主机的 <code>next</code> 分支，与本地的 <code>master</code> 分支合并，需要写成下面这样</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin next:master</span><br></pre></td></tr></table></figure>
+
+<p>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin next</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，取回 <code>origin/next</code> 分支，再与当前分支合并。实质上，这等同于先做 <code>git fetch</code>  ，再做 <code>git merge</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch origin</span><br><span class="line">$ git merge origin&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>在某些场合，Git 会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。</p>
+<p>比如，在 <code>git clone</code> 的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的 <code>master</code> 分支自动”追踪” <code>origin/master</code> 分支。</p>
+<p>Git 也允许手动建立追踪关系。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch --set-upstream master origin&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>上面命令指定 <code>master</code> 分支追踪 <code>origin/next</code> 分支。</p>
+<p>如果当前分支与远程分支存在追踪关系，<code>git pull</code> 就可以省略远程分支名。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，本地的当前分支自动与对应的 <code>origin</code> 主机”追踪分支”(remote-tracking branch)进行合并。</p>
+<p>如果当前分支只有一个追踪分支，连远程主机名都可以省略。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，当前分支自动与唯一一个追踪分支进行合并。</p>
+<p>如果合作需要采用 rebase 模式，可以使用 <code>--rebase</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull --rebase &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果远程主机删除了某个分支，默认情况下，<code>git pull</code> 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致 <code>git pull</code> 不知不觉删除了本地分支。</p>
+<p>但是，你可以改变这个行为，加上参数 <code>-p</code> 就会在本地删除远程已经删除的分支。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull -p</span><br><span class="line"># 等同于下面的命令</span><br><span class="line">$ git fetch --prune origin </span><br><span class="line">$ git fetch -p</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><p><code>git push</code> 命令用于将本地分支的更新，推送到远程主机。它的格式与 <code>git pull</code> 命令相仿。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，所以 <code>git pull</code> 是&lt;远程分支&gt;:&lt;本地分支&gt;，而 <code>git push</code> 是&lt;本地分支&gt;:&lt;远程分支&gt;。</p>
+<p>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被新建。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，将本地的 <code>master</code> 分支推送到 <code>origin</code> 主机的 <code>master</code> 分支。如果后者不存在，则会被新建</p>
+<p>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin :master</span><br><span class="line"># 等同于</span><br><span class="line">$ git push origin --delete master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示删除 <code>origin</code> 主机的 <code>master</code> 分支。</p>
+<p>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，将当前分支推送到 <code>origin</code> 主机的对应分支。</p>
+<p>如果当前分支只有一个追踪分支，那么主机名都可以省略。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+
+<p>如果当前分支与多个主机存在追踪关系，则可以使用 <code>-u</code> 选项指定一个默认主机，这样后面就可以不加任何参数使用 <code>git push</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>上面命令将本地的 <code>master</code> 分支推送到 <code>origin</code> 主机，同时指定 <code>origin</code> 为默认主机，后面就可以不加任何参数使用 <code>git push</code> 了。</p>
+<p>不带任何参数的 <code>git push</code>，默认只推送当前分支，这叫做 simple 方式。此外，还有一种 matching 方式，会摄像头所有有对应的远程分支的本地分支。 Git 2.0 版本之前，默认采用 matching 方法，现在改为默认采用 simple 方式。如果要修改这个设置，可以采用 <code>git config</code> 命令。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global push.default matching</span><br><span class="line"># 或者</span><br><span class="line">$ git config --global push.default simple</span><br></pre></td></tr></table></figure>
+
+<p>还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用 <code>--all</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push --all origin</span><br></pre></td></tr></table></figure>
+
+<p>上面命令表示，将所有本地分支都推送到 <code>origin</code> 主机。</p>
+<p>如果远程主机的版本比本地版本更新，推送时 Git 会报错，要求先在本地做 <code>git pull</code> 合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用 <code>--force</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push --force origin</span><br></pre></td></tr></table></figure>
+
+<p>上面命令使用 <code>--force</code> 选项，结果导致远程主机上更新的版本被覆盖。除非你很确定要这样做，否则应该尽量避免使用 <code>--force</code> 选项。</p>
+<p>最后，<code>git push</code> 不会推送标签(tag)，除非使用 <code>--tags</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&amp; git push origin --tags</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<p>阮一峰博客： <a href="https://www.ruanyifeng.com/blog/2014/06/git_remote.html">https://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p>
+<p>廖雪峰的官方网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<p>菜鸟教程：<a href="https://www.runoob.com/git/git-tutorial.html">https://www.runoob.com/git/git-tutorial.html</a></p>
+</blockquote>
+]]></content>
       <categories>
         <category>Programming</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -145,6 +402,100 @@
       <tags>
         <tag>github</tag>
         <tag>pycharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python的mysql基本用法</title>
+    <url>/2021/05/13/python-mysql/</url>
+    <content><![CDATA[<h2 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h2><p><code>autocommit=True</code>相当于每次执行 <code>db.commit()</code></p>
+<span id="more"></span>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port=<span class="number">3306</span>,</span><br><span class="line">    user=<span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    passwd=<span class="string">&#x27;password&#x27;</span>,</span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>,</span><br><span class="line">    autocommit=<span class="literal">True</span>,</span><br><span class="line">    database=<span class="string">&#x27;test&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">mycursor = db.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查数据库是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW DATABASES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="创建表-CREATE"><a href="#创建表-CREATE" class="headerlink" title="创建表(CREATE)"></a>创建表(CREATE)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;&quot;&quot;CREATE TABLE table_name(</span></span><br><span class="line"><span class="string">      id INT AUTO_INCREMENT PRIMARY KEY,</span></span><br><span class="line"><span class="string">      name VARCHAR(20),</span></span><br><span class="line"><span class="string">      sex VARCHAR(4),</span></span><br><span class="line"><span class="string">      age INT(4),</span></span><br><span class="line"><span class="string">      adress VARCHAR(255)</span></span><br><span class="line"><span class="string">      )DEFAULT CHARSET=utf8&quot;&quot;&quot;</span></span><br><span class="line">      </span><br><span class="line">mycursor.execute(sql)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查表是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW TABLES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改选项语法"><a href="#修改选项语法" class="headerlink" title="修改选项语法"></a>修改选项语法</h3><p><code>ALTER TABLE</code>  语句可以改变原有表的结构，例如增加或删减列、更改原有列类型、重新命名列或表等。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在已有的表上添加主键</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name ADD COLUMN(phone INT(10))&quot;)</span><br><span class="line"># 修改表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name MODIFY COLUMN(phone INT(11))&quot;)</span><br><span class="line"># 删除表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name DROP COLUMN phone&quot;)</span><br><span class="line"># 表重命名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name RENAME TO table1&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><code>DEFAULT CHARSET=utf8</code> 设置 <code>utf8</code> 编码以免出现中文乱码</p>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>规定了列可容纳何种数据类型（data_type）。下面的表格包含了<code>SQL</code>中最常用的数据类型：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>integer(size)<br>int(size)<br>smallint(size)<br>tinyint(size)</td>
+<td>仅容纳整数。<br>在括号内规定数字的最大位数</td>
+</tr>
+<tr>
+<td>decimal(size,d)<br>numeric(size,d)</td>
+<td>容纳带有小数的数字。<br>“size”规定数字的最大位数，”d”规定小数点右侧的最大位数。</td>
+</tr>
+<tr>
+<td>char(size)</td>
+<td>容纳固定长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度</td>
+</tr>
+<tr>
+<td>varchar(size)</td>
+<td>容纳可变长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度。</td>
+</tr>
+<tr>
+<td>date(yyyymmdd)</td>
+<td>容纳日期</td>
+</tr>
+</tbody></table>
+<h2 id="插入表-INSERT"><a href="#插入表-INSERT" class="headerlink" title="插入表(INSERT)"></a>插入表(INSERT)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;小帅&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;北京市朝阳区&#x27;</span>, <span class="string">&#x27;13854385438&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入多行"><a href="#插入多行" class="headerlink" title="插入多行"></a>插入多行</h3><p>要在表中插入多行，请使用 <code>executemany()</code> 方法。</p>
+<p><code>executemany()</code> 方法的第二个参数是元组列表，包含要插入的数据：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = [</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小李&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;21&#x27;</span>, <span class="string">&#x27;成都市双流区&#x27;</span>, <span class="string">&#x27;18756548875&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;张大&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;13965456654&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小樱&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;重庆市XX路&#x27;</span>, <span class="string">&#x27;188654578852&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>)</span><br><span class="line">]</span><br><span class="line">mycursor.executemany(sql, val)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;最后插入的一行: &#123;&#125;&#x27;</span>.fromat(mycursor.lastrowid))</span><br></pre></td></tr></table></figure>
+
+<p>您可以通过询问 <code>mycursor.lastrowid</code> 对象来获取刚插入的行的 id。</p>
+<p><strong>注释：</strong>如果插入不止一行，则返回最后插入行的 id。</p>
+<h2 id="选择表内容-SELECT"><a href="#选择表内容-SELECT" class="headerlink" title="选择表内容(SELECT)"></a>选择表内容(<code>SELECT</code>)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br></pre></td></tr></table></figure>
+
+<h3 id="选取指定内容"><a href="#选取指定内容" class="headerlink" title="选取指定内容"></a>选取指定内容</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT name, adress FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回结果的第一行</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(mycursor.fetchone())</span><br></pre></td></tr></table></figure>
+
+<h2 id="筛选器选取-WHERE"><a href="#筛选器选取-WHERE" class="headerlink" title="筛选器选取(WHERE)"></a>筛选器选取(<code>WHERE</code>)</h2><p>选择地址为 “上海市虹桥区” 的记录</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress =&#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符(%)"></a>通配符(<code>%</code>)</h3><p>您也可以选择以给定字母或短语开头、包含或结束的记录。</p>
+<p>请使用 <code>％</code> 表示通配符：</p>
+<p>选择以 “区” 结尾的地区</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress LIKE &#x27;%区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h2 id="结果排序-ORDER-BY"><a href="#结果排序-ORDER-BY" class="headerlink" title="结果排序(ORDER BY)"></a>结果排序(<code>ORDER BY</code>)</h2><p><code>ORDER BY</code> 关键字默认按升序对结果进行排序。若要按降序对结果进行排序，请使用 <code>DESC</code> 关键字。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># DESC 关键字按降序对结果进行排序</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age DESC&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除记录-DELETE"><a href="#删除记录-DELETE" class="headerlink" title="删除记录(DELETE)"></a>删除记录(<code>DELETE</code>)</h2><p>请注意 DELETE 语法中的 WHERE 子句：WHERE 子句指定应删除哪些记录。如果省略 WHERE 子句，则将删除所有记录！</p>
+<p>删除姓名 “有容” 的列</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = &#x27;有容&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除表-DROP-TABLE"><a href="#删除表-DROP-TABLE" class="headerlink" title="删除表(DROP TABLE)"></a>删除表(<code>DROP TABLE</code>)</h2><p>删除 “table_name” 表：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;DROP TABLE table_name&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要删除的表已被删除，或者由于任何其他原因不存在，那么可以使用 IF EXISTS 关键字以避免出错</span></span><br><span class="line">sql = <span class="string">&quot;DROP TABLE IF EXISTS table_name&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新表-UPDATE"><a href="#更新表-UPDATE" class="headerlink" title="更新表(UPDATE)"></a>更新表(<code>UPDATE</code>)</h2><p>把地址列中的 “上海市虹桥区” 覆盖为 “上海市黄浦区”：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = &#x27;上海市黄浦区&#x27; WHERE adress = &#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
+
+<h2 id="限制查询返回记录数-LIMIT"><a href="#限制查询返回记录数-LIMIT" class="headerlink" title="限制查询返回记录数(LIMIT)"></a>限制查询返回记录数(<code>LIMIT</code>)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 5&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从位置 2 开始返回 2 条记录</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 2 OFFSET 2&quot;</span>)</span><br><span class="line"></span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+
+<h2 id="防止-SQL-注入"><a href="#防止-SQL-注入" class="headerlink" title="防止 SQL 注入"></a>防止 <code>SQL</code> 注入</h2><p>当用户提供查询值时，您应该转义这些值。</p>
+<p>此举是为了防止 <code>SQL</code> 注入，这是一种常见的网络黑客技术，可以破坏或滥用您的数据库。</p>
+<p><code>mysql.connector</code> 模块拥有转义查询值的方法：</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用占位符 ％s 方法来转义查询值：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># where 筛选</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress = %s&quot;</span></span><br><span class="line">adr = (<span class="string">&#x27;上海市虹桥区&#x27;</span>, )</span><br><span class="line">mycursor.execute(sql, adr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete 删除记录</span></span><br><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = %s&quot;</span></span><br><span class="line">name = (<span class="string">&#x27;有容&#x27;</span>,)</span><br><span class="line">mycursor.execute(sql, name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update 更新记录</span></span><br><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = %s WHERE adress = %s&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;上海市黄浦区&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -455,357 +806,6 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">charref = re.<span class="built_in">compile</span>(<span class="string">&quot;&amp;#(0[0-7]+|[0-9]+|x[0-9a-fA-F]+);&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 <p>哪个可读性更加？相信大家心里有底了。</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git基础操作</title>
-    <url>/2020/07/08/git-commands/</url>
-    <content><![CDATA[<p>本文针对初级用户，从最简单的讲起，但是需要读者对 <code>git</code> 基本用法有所了解。</p>
-<h2 id="Git-基本概念"><a href="#Git-基本概念" class="headerlink" title="Git 基本概念"></a>Git 基本概念</h2><p>我们先来理解下 Git 工作区、暂存区和版本库概念</p>
-<ul>
-<li><strong>工作区</strong>：就是人在电脑里能看到的目录</li>
-<li><strong>暂存区</strong>：英文叫 stage，或 index。一般存放在 “.git目录” 下的 index 文件(.git/index)中，所以我们把暂存区有时也叫作索引(index)。</li>
-<li><strong>版本库</strong>：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。</li>
-</ul>
- <span id="more"></span>
-
-<p>下面这个图展示了工作区、版本库中的暂存区和版本库之间的关系。</p>
-<p><img src="https://github.com/guluding/Images/blob/master/git_diagram.jpg?raw=true"></p>
-<p>图中的 objects 标识的区域为 Git 的对象库，实际位于 <code>.git/objects</code> 目录下，里面包含了创建的各种对象及内容。</p>
-<h2 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h2><h3 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h3><p>用 <code>git init</code> 在目录中创建新的 Git 仓库，你可以在任何时候、任何目录中这么做，完全是本地化的。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir guluding</span><br><span class="line">$ cd guluding&#x2F;</span><br><span class="line">$ git init</span><br><span class="line">Initialized empty Git repository in &#x2F;home&#x2F;cj&#x2F;guluding&#x2F;.git&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h3><p><code>git add</code> 命令可将该文件添加到缓存，如我们添加以下两个文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ touch README</span><br><span class="line">$ touch hello.py</span><br><span class="line">$ git status -s</span><br><span class="line">?? README</span><br><span class="line">?? hello.py</span><br></pre></td></tr></table></figure>
-
-<p><code>git status</code> 命令用于查看项目的当前状态。</p>
-<p>接下来我们执行 <code>git add</code> 命令来添加文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add README hello.py</span><br></pre></td></tr></table></figure>
-
-<p>现在我们再执行 <code>git status</code> ，就可以看到这两个文件已经加上去了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
-
-<p>新项目中，添加所有文件很普遍，我们可以使用 <code>git add .</code> 命令来添加当前项目的所有文件。</p>
-<p>现在我们修改 README 文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ vim README</span><br></pre></td></tr></table></figure>
-
-<p>在 README 添加任意内容后保存退出。</p>
-<p>再执行一下 <code>git status</code>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
-
-<p><code>AM</code> 状态的意思是，这个文件在我们将它添加到缓存之后又有改动。改动后我们再执行 <code>git add</code> 命令将其添加到缓存中：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br></pre></td></tr></table></figure>
-
-<p>当你将你的修改包含在即将提交的快照里的时候，需要执行 <code>git add</code></p>
-<h3 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h3><p><code>git status</code> 以查看在你上次提交之后是否有修改。</p>
-<p>上例演示该命令的时候加了 <code>-s</code> 参数，以获得简短的结果输出。如果没加该参数会详细输出内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 取消 hello.py 的缓存，以便查看两个文件不同的提示</span><br><span class="line">$ git reset HEAD -- hello.py</span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">No commits yet</span><br><span class="line"></span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span><br><span class="line">        new file:   README</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span><br><span class="line">        hello.py</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><p>执行 <code>git diff</code> 来查看执行 <code>git status</code> 的结果的详细信息。</p>
-<p><code>git diff</code> 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。<code>git diff</code> 有两个主要的应用场景。</p>
-<ul>
-<li>尚未缓存的改动：<code>git diff</code></li>
-<li>查看已缓存的改动：<code>git dif  --cached</code></li>
-<li>查看已缓存的与未缓存的所有改动：<code>git diff HEAD</code></li>
-<li>显示摘要而非整个 diff：<code>git diff --stat</code></li>
-</ul>
-<p>修改 `README’ 后执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">index 5bd35b1..72ca035 100644</span><br><span class="line">--- a&#x2F;README</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -1,2 +1,3 @@</span><br><span class="line"> This is a test file</span><br><span class="line"> use before look at this.</span><br><span class="line">+However it is not any useful.</span><br></pre></td></tr></table></figure>
-
-<p>接下来我们来查看下 <code>git diff --cached</code> 的执行效果：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">index 5bd35b1..72ca035 100644</span><br><span class="line">--- a&#x2F;README</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -1,2 +1,3 @@</span><br><span class="line"> This is a test file</span><br><span class="line"> use before look at this.</span><br><span class="line">+However it is not any useful.</span><br><span class="line">cj@DESKTOP-O39JCF4:~&#x2F;guluding$ git diff --cached</span><br><span class="line">diff --git a&#x2F;README b&#x2F;README</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..5bd35b1</span><br><span class="line">--- &#x2F;dev&#x2F;null</span><br><span class="line">+++ b&#x2F;README</span><br><span class="line">@@ -0,0 +1,2 @@</span><br><span class="line">+This is a test file</span><br><span class="line">+use before look at this.</span><br><span class="line">diff --git a&#x2F;hello.py b&#x2F;hello.py</span><br><span class="line">new file mode 100644</span><br><span class="line">index 0000000..96e1727</span><br><span class="line">--- &#x2F;dev&#x2F;null</span><br><span class="line">+++ b&#x2F;hello.py</span><br><span class="line">@@ -0,0 +1,2 @@</span><br><span class="line">+print(&#39;Hello World&#39;)</span><br><span class="line">+</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>使用 <code>git add</code> 命令将想要快照的内容写入缓存区，而执行 <code>git commit</code> 将缓存区内容添加到仓库中。</p>
-<p>Git 为你的每一个提交都记录你的名字与电子邮箱地址，所以第一步需要配置用户名和邮箱地址。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &#39;username&#39;</span><br><span class="line">$ git config --global user.email &#39;youremail&#39;</span><br></pre></td></tr></table></figure>
-
-<p>接下来我们提交，我们使用 <code>-m</code> 选项以在命令行中提交注释。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -m &#39;First commit&#39;</span><br><span class="line">[master (root-commit) 5aa5775] First commit</span><br><span class="line"> 2 files changed, 4 insertions(+)</span><br><span class="line"> create mode 100644 README</span><br><span class="line"> create mode 100644 hello.py</span><br></pre></td></tr></table></figure>
-
-<p>现在我们已经记录了快照。如果我们再执行 <code>git status</code>：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-
-<p>以上输出说明我们在最近一提交之后，没有做任何改改，是一个 <code>working directory clean: 干净的工作目录</code>。</p>
-<p>如果你觉得 <code>git add</code> 提交缓存的流程太过繁琐，Git 也允许你用 <code>-a</code> 选项路过这一步。命令格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git commit -am &#39;修改 hell.py 文件&#39;</span><br><span class="line">[master c349302] 修改 hell.py 文件</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-reset-HEAD"><a href="#git-reset-HEAD" class="headerlink" title="git reset HEAD"></a>git reset HEAD</h3><p><code>git reset HEAD</code> 命令用于取消已缓存的内容。</p>
-<p>我们先将 README 和 hello.py 做任意修改：</p>
-<p>现在两个文件修改后，都提交到缓存区，我们取消其中一个缓存，操作如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git status -s</span><br><span class="line">AM README</span><br><span class="line">AM hello.py</span><br><span class="line">$ git add .</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">A  hello.py</span><br><span class="line">$ git reset HEAD -- hello.py</span><br><span class="line">$ git status -s</span><br><span class="line">A  README</span><br><span class="line">?? hello.py</span><br></pre></td></tr></table></figure>
-
-<p>简而言之，执行 <code>git reset HEAD -- &lt;file&gt;</code> 取消之前 <code>git add </code> 添加，但不希望包含在下一提交快照中的缓存。</p>
-<h3 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h3><p>如果只是简单地从工作目录中手工删除文件，运行 <code>git status</code> 时就会在 <code>changes not staged for commit</code> 的提示。</p>
-<p>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm &lt;file&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 <code>-f</code> </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm -f &lt;file&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果把文件从暂存区域移除，但仍希望保留在当前工作目录中，换句话说，公是从跟踪清单中删除，使用 <code>--cached</code> 选项即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm --cached &lt;file&gt;</span><br></pre></td></tr></table></figure>
-
-<p>可以递归删除，即如果后面跟的是一个目录做为参数，则会递归删除整个目录中的所有子目录和文件：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git rm -r *</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-mv"><a href="#git-mv" class="headerlink" title="git mv"></a>git mv</h3><p><code>git mv</code> 命令用于移动或重命名一个文件、目录、软连接。</p>
-<p>我们将 README 重名为 README.md：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git mv README README.md</span><br></pre></td></tr></table></figure>
-
-<h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><p><img src="https://github.com/guluding/Images/blob/master/git_base.jpg?raw=true"></p>
-<h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p>远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到 <code>git clone</code> 命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;url&gt;</span><br></pre></td></tr></table></figure>
-
-<p>该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为 <code>git clone</code> 命令的第二个参数.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone &lt;url&gt; [&lt;dir&gt;]</span><br></pre></td></tr></table></figure>
-
-<p> <code>git clone</code> 支持多种协议，除了 <strong>http(s)</strong> 以外，还支持 <strong>ssh、git、本地文件协议等</strong>，通常来说， git 协议下载速度最快，ssh 协议用于需要用户认证的场合</p>
-<h3 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h3><p>为了方便管理，Git 要求每个远程不知主机都必须指定一个主机名。<code>git remote</code> 命令就用于管理主机名。</p>
-<p>不带选项的时候，<code>git remote</code> 命令列出所有远程主机。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure>
-
-<p>使用 <code>-v</code> 选项，可以参看远程的网址。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git remote -v</span><br><span class="line">origin  git@github.com:username&#x2F;repository.git (fetch)</span><br><span class="line">origin  git@github.com:username&#x2F;repository.git (push)</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，当前只有一台远程主机，叫做 <code>origin</code>，以及它的网址</p>
-<p>克隆版本库的时候，所使用的远程主机自动被 Git 命名为 <code>origin</code> 。如果想用其它的主机名，需要用 <code>git clone</code> 命令的 <code>-o</code> 选项指定。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone -o jQuery https:&#x2F;&#x2F;github.com&#x2F;jquery&#x2F;jquery.git</span><br><span class="line">$ git remote</span><br><span class="line">jQuery</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，克隆的时候，指定远程主机叫做 jQuery</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 加上主机名，可以查看该主机的详细信息。</span><br><span class="line">$ git remote show &lt;主机名&gt;</span><br><span class="line"></span><br><span class="line"># 添加远程主机</span><br><span class="line">$ git remote add &lt;主机名&gt; &lt;网址&gt;</span><br><span class="line"></span><br><span class="line"># 删除远程主机</span><br><span class="line">$ git remote rm &lt;主机名&gt;</span><br><span class="line"></span><br><span class="line"># 远程主机的改名</span><br><span class="line">$ git remote rename &lt;原主机名&gt; &lt;新主机名&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a>git fetch</h3><p>一旦远程主机的版本有了更新(Git 术语叫做 commit)，需要将这些取回本地，这时就要用到 <code>git fetch</code> 命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch &lt;远程主机名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>上面命令将某个远程主机的更新，全部取回本地。</p>
-<p><code>git fetch</code> 命令通常用来查看其它人的进程，因为它取回的代码对你本地的开发代码没有影响。</p>
-<p>默认情况下，<code>git fetch</code> 取回所有分支的更新。如果只想取回特定分支的更新，可以指定分支名。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如 <code>origin</code> 主机的 <code>master</code> ，就要用 <code>origin/master</code> 读取。</p>
-<p><code>git branch</code> 命令的 <code>-r</code> 选项，可以用来查看远程分支，<code>-a</code> 选项查看所有分支。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch -r</span><br><span class="line">origin&#x2F;master</span><br><span class="line"></span><br><span class="line">$ git branch -a</span><br><span class="line">* master</span><br><span class="line">  remotes&#x2F;origin&#x2F;master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，本地主机的当前分支是 <code>master</code> ，远程分支是 <code>origin/master</code></p>
-<p>取回远程主机的更新以后，可以在它的基础上，使用 <code>git checkout</code> 命令创建一个新的分支。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b newBrach origin&#x2F;master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，在 <code>origin/master</code> 的基础上，创建一个新分支。</p>
-<p>此外，也可以使用 <code>git merge</code> 命令或者 <code>git rebase</code> 命令，在本地分支上合并远程分支。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git merge origin&#x2F;master</span><br><span class="line"># 或者</span><br><span class="line">$ git rebase origin&#x2F;master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示在当前分支上，合并 <code>origin/master</code> 。</p>
-<h3 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h3><p><code>git pull</code> 命令的作用是，取回远程主机某个分支的更新，再与本地的指定分支合并。它的完整格式稍稍有点复杂。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>比如，取回 <code>origin</code> 主机的 <code>next</code> 分支，与本地的 <code>master</code> 分支合并，需要写成下面这样</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin next:master</span><br></pre></td></tr></table></figure>
-
-<p>如果远程分支是与当前分支合并，则冒号后面的部分可以省略。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin next</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，取回 <code>origin/next</code> 分支，再与当前分支合并。实质上，这等同于先做 <code>git fetch</code>  ，再做 <code>git merge</code> 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git fetch origin</span><br><span class="line">$ git merge origin&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>在某些场合，Git 会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。</p>
-<p>比如，在 <code>git clone</code> 的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的 <code>master</code> 分支自动”追踪” <code>origin/master</code> 分支。</p>
-<p>Git 也允许手动建立追踪关系。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git branch --set-upstream master origin&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>上面命令指定 <code>master</code> 分支追踪 <code>origin/next</code> 分支。</p>
-<p>如果当前分支与远程分支存在追踪关系，<code>git pull</code> 就可以省略远程分支名。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，本地的当前分支自动与对应的 <code>origin</code> 主机”追踪分支”(remote-tracking branch)进行合并。</p>
-<p>如果当前分支只有一个追踪分支，连远程主机名都可以省略。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，当前分支自动与唯一一个追踪分支进行合并。</p>
-<p>如果合作需要采用 rebase 模式，可以使用 <code>--rebase</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull --rebase &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>如果远程主机删除了某个分支，默认情况下，<code>git pull</code> 不会在拉取远程分支的时候，删除对应的本地分支。这是为了防止，由于其他人操作了远程主机，导致 <code>git pull</code> 不知不觉删除了本地分支。</p>
-<p>但是，你可以改变这个行为，加上参数 <code>-p</code> 就会在本地删除远程已经删除的分支。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull -p</span><br><span class="line"># 等同于下面的命令</span><br><span class="line">$ git fetch --prune origin </span><br><span class="line">$ git fetch -p</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><p><code>git push</code> 命令用于将本地分支的更新，推送到远程主机。它的格式与 <code>git pull</code> 命令相仿。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push &lt;远程主机名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</span><br></pre></td></tr></table></figure>
-
-<p>注意，分支推送顺序的写法是&lt;来源地&gt;:&lt;目的地&gt;，所以 <code>git pull</code> 是&lt;远程分支&gt;:&lt;本地分支&gt;，而 <code>git push</code> 是&lt;本地分支&gt;:&lt;远程分支&gt;。</p>
-<p>如果省略远程分支名，则表示将本地分支推送与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被新建。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，将本地的 <code>master</code> 分支推送到 <code>origin</code> 主机的 <code>master</code> 分支。如果后者不存在，则会被新建</p>
-<p>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin :master</span><br><span class="line"># 等同于</span><br><span class="line">$ git push origin --delete master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示删除 <code>origin</code> 主机的 <code>master</code> 分支。</p>
-<p>如果当前分支与远程分支之间存在追踪关系，则本地分支和远程分支都可以省略。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push origin</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，将当前分支推送到 <code>origin</code> 主机的对应分支。</p>
-<p>如果当前分支只有一个追踪分支，那么主机名都可以省略。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-
-<p>如果当前分支与多个主机存在追踪关系，则可以使用 <code>-u</code> 选项指定一个默认主机，这样后面就可以不加任何参数使用 <code>git push</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<p>上面命令将本地的 <code>master</code> 分支推送到 <code>origin</code> 主机，同时指定 <code>origin</code> 为默认主机，后面就可以不加任何参数使用 <code>git push</code> 了。</p>
-<p>不带任何参数的 <code>git push</code>，默认只推送当前分支，这叫做 simple 方式。此外，还有一种 matching 方式，会摄像头所有有对应的远程分支的本地分支。 Git 2.0 版本之前，默认采用 matching 方法，现在改为默认采用 simple 方式。如果要修改这个设置，可以采用 <code>git config</code> 命令。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git config --global push.default matching</span><br><span class="line"># 或者</span><br><span class="line">$ git config --global push.default simple</span><br></pre></td></tr></table></figure>
-
-<p>还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用 <code>--all</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push --all origin</span><br></pre></td></tr></table></figure>
-
-<p>上面命令表示，将所有本地分支都推送到 <code>origin</code> 主机。</p>
-<p>如果远程主机的版本比本地版本更新，推送时 Git 会报错，要求先在本地做 <code>git pull</code> 合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用 <code>--force</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git push --force origin</span><br></pre></td></tr></table></figure>
-
-<p>上面命令使用 <code>--force</code> 选项，结果导致远程主机上更新的版本被覆盖。除非你很确定要这样做，否则应该尽量避免使用 <code>--force</code> 选项。</p>
-<p>最后，<code>git push</code> 不会推送标签(tag)，除非使用 <code>--tags</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&amp; git push origin --tags</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
-<p>阮一峰博客： <a href="https://www.ruanyifeng.com/blog/2014/06/git_remote.html">https://www.ruanyifeng.com/blog/2014/06/git_remote.html</a></p>
-<p>廖雪峰的官方网站：<a href="https://www.liaoxuefeng.com/wiki/896043488029600">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
-<p>菜鸟教程：<a href="https://www.runoob.com/git/git-tutorial.html">https://www.runoob.com/git/git-tutorial.html</a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Programming</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2000/07/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>python的mysql基本用法</title>
-    <url>/2021/05/13/python-mysql/</url>
-    <content><![CDATA[<h2 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h2><p><code>autocommit=True</code>相当于每次执行 <code>db.commit()</code></p>
-<span id="more"></span>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(</span><br><span class="line">    host=<span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    port=<span class="number">3306</span>,</span><br><span class="line">    user=<span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    passwd=<span class="string">&#x27;password&#x27;</span>,</span><br><span class="line">    charset=<span class="string">&#x27;utf8&#x27;</span>,</span><br><span class="line">    autocommit=<span class="literal">True</span>,</span><br><span class="line">    database=<span class="string">&#x27;test&#x27;</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">mycursor = db.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查数据库是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW DATABASES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="创建表-CREATE"><a href="#创建表-CREATE" class="headerlink" title="创建表(CREATE)"></a>创建表(CREATE)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;&quot;&quot;CREATE TABLE table_name(</span></span><br><span class="line"><span class="string">      id INT AUTO_INCREMENT PRIMARY KEY,</span></span><br><span class="line"><span class="string">      name VARCHAR(20),</span></span><br><span class="line"><span class="string">      sex VARCHAR(4),</span></span><br><span class="line"><span class="string">      age INT(4),</span></span><br><span class="line"><span class="string">      adress VARCHAR(255)</span></span><br><span class="line"><span class="string">      )DEFAULT CHARSET=utf8&quot;&quot;&quot;</span></span><br><span class="line">      </span><br><span class="line">mycursor.execute(sql)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查表是否存在</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SHOW TABLES&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> mycursor:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改选项语法"><a href="#修改选项语法" class="headerlink" title="修改选项语法"></a>修改选项语法</h3><p><code>ALTER TABLE</code>  语句可以改变原有表的结构，例如增加或删减列、更改原有列类型、重新命名列或表等。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 在已有的表上添加主键</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name ADD COLUMN(phone INT(10))&quot;)</span><br><span class="line"># 修改表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name MODIFY COLUMN(phone INT(11))&quot;)</span><br><span class="line"># 删除表已有列名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name DROP COLUMN phone&quot;)</span><br><span class="line"># 表重命名</span><br><span class="line">mycursor.execute(&quot;ALTER TABLE table_name RENAME TO table1&quot;)</span><br></pre></td></tr></table></figure>
-
-<p><code>DEFAULT CHARSET=utf8</code> 设置 <code>utf8</code> 编码以免出现中文乱码</p>
-<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>规定了列可容纳何种数据类型（data_type）。下面的表格包含了<code>SQL</code>中最常用的数据类型：</p>
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>integer(size)<br>int(size)<br>smallint(size)<br>tinyint(size)</td>
-<td>仅容纳整数。<br>在括号内规定数字的最大位数</td>
-</tr>
-<tr>
-<td>decimal(size,d)<br>numeric(size,d)</td>
-<td>容纳带有小数的数字。<br>“size”规定数字的最大位数，”d”规定小数点右侧的最大位数。</td>
-</tr>
-<tr>
-<td>char(size)</td>
-<td>容纳固定长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度</td>
-</tr>
-<tr>
-<td>varchar(size)</td>
-<td>容纳可变长度的字符串(可容纳字母、数字以及特殊字符)。<br>在括号中规定字符串的最大长度。</td>
-</tr>
-<tr>
-<td>date(yyyymmdd)</td>
-<td>容纳日期</td>
-</tr>
-</tbody></table>
-<h2 id="插入表-INSERT"><a href="#插入表-INSERT" class="headerlink" title="插入表(INSERT)"></a>插入表(INSERT)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;小帅&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;北京市朝阳区&#x27;</span>, <span class="string">&#x27;13854385438&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
-
-<h3 id="插入多行"><a href="#插入多行" class="headerlink" title="插入多行"></a>插入多行</h3><p>要在表中插入多行，请使用 <code>executemany()</code> 方法。</p>
-<p><code>executemany()</code> 方法的第二个参数是元组列表，包含要插入的数据：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;INSERT INTO table_name (name, sex, age, adress, phone) VALUES (%s, %s, %s, %s, %s)&quot;</span></span><br><span class="line">val = [</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小李&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;21&#x27;</span>, <span class="string">&#x27;成都市双流区&#x27;</span>, <span class="string">&#x27;18756548875&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;张大&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;13965456654&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小樱&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;重庆市XX路&#x27;</span>, <span class="string">&#x27;188654578852&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;小美&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>, <span class="string">&#x27;12555555555&#x27;</span>)</span><br><span class="line">]</span><br><span class="line">mycursor.executemany(sql, val)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;最后插入的一行: &#123;&#125;&#x27;</span>.fromat(mycursor.lastrowid))</span><br></pre></td></tr></table></figure>
-
-<p>您可以通过询问 <code>mycursor.lastrowid</code> 对象来获取刚插入的行的 id。</p>
-<p><strong>注释：</strong>如果插入不止一行，则返回最后插入行的 id。</p>
-<h2 id="选择表内容-SELECT"><a href="#选择表内容-SELECT" class="headerlink" title="选择表内容(SELECT)"></a>选择表内容(<code>SELECT</code>)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br></pre></td></tr></table></figure>
-
-<h3 id="选取指定内容"><a href="#选取指定内容" class="headerlink" title="选取指定内容"></a>选取指定内容</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT name, adress FROM table_name &quot;</span>)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回结果的第一行</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(mycursor.fetchone())</span><br></pre></td></tr></table></figure>
-
-<h2 id="筛选器选取-WHERE"><a href="#筛选器选取-WHERE" class="headerlink" title="筛选器选取(WHERE)"></a>筛选器选取(<code>WHERE</code>)</h2><p>选择地址为 “上海市虹桥区” 的记录</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress =&#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">result = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> result:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h3 id="通配符"><a href="#通配符" class="headerlink" title="通配符(%)"></a>通配符(<code>%</code>)</h3><p>您也可以选择以给定字母或短语开头、包含或结束的记录。</p>
-<p>请使用 <code>％</code> 表示通配符：</p>
-<p>选择以 “区” 结尾的地区</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress LIKE &#x27;%区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="结果排序-ORDER-BY"><a href="#结果排序-ORDER-BY" class="headerlink" title="结果排序(ORDER BY)"></a>结果排序(<code>ORDER BY</code>)</h2><p><code>ORDER BY</code> 关键字默认按升序对结果进行排序。若要按降序对结果进行排序，请使用 <code>DESC</code> 关键字。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># DESC 关键字按降序对结果进行排序</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name ORDER BY age DESC&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除记录-DELETE"><a href="#删除记录-DELETE" class="headerlink" title="删除记录(DELETE)"></a>删除记录(<code>DELETE</code>)</h2><p>请注意 DELETE 语法中的 WHERE 子句：WHERE 子句指定应删除哪些记录。如果省略 WHERE 子句，则将删除所有记录！</p>
-<p>删除姓名 “有容” 的列</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = &#x27;有容&#x27;&quot;</span></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除表-DROP-TABLE"><a href="#删除表-DROP-TABLE" class="headerlink" title="删除表(DROP TABLE)"></a>删除表(<code>DROP TABLE</code>)</h2><p>删除 “table_name” 表：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;DROP TABLE table_name&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要删除的表已被删除，或者由于任何其他原因不存在，那么可以使用 IF EXISTS 关键字以避免出错</span></span><br><span class="line">sql = <span class="string">&quot;DROP TABLE IF EXISTS table_name&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="更新表-UPDATE"><a href="#更新表-UPDATE" class="headerlink" title="更新表(UPDATE)"></a>更新表(<code>UPDATE</code>)</h2><p>把地址列中的 “上海市虹桥区” 覆盖为 “上海市黄浦区”：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = &#x27;上海市黄浦区&#x27; WHERE adress = &#x27;上海市虹桥区&#x27;&quot;</span></span><br><span class="line"></span><br><span class="line">mycursor.execute(sql)</span><br></pre></td></tr></table></figure>
-
-<h2 id="限制查询返回记录数-LIMIT"><a href="#限制查询返回记录数-LIMIT" class="headerlink" title="限制查询返回记录数(LIMIT)"></a>限制查询返回记录数(<code>LIMIT</code>)</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 5&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从位置 2 开始返回 2 条记录</span></span><br><span class="line">mycursor.execute(<span class="string">&quot;SELECT * FROM table_name LIMIT 2 OFFSET 2&quot;</span>)</span><br><span class="line"></span><br><span class="line">myresult = mycursor.fetchall()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> myresult:</span><br><span class="line">    <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<h2 id="防止-SQL-注入"><a href="#防止-SQL-注入" class="headerlink" title="防止 SQL 注入"></a>防止 <code>SQL</code> 注入</h2><p>当用户提供查询值时，您应该转义这些值。</p>
-<p>此举是为了防止 <code>SQL</code> 注入，这是一种常见的网络黑客技术，可以破坏或滥用您的数据库。</p>
-<p><code>mysql.connector</code> 模块拥有转义查询值的方法：</p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>使用占位符 ％s 方法来转义查询值：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># where 筛选</span></span><br><span class="line">sql = <span class="string">&quot;SELECT * FROM table_name WHERE adress = %s&quot;</span></span><br><span class="line">adr = (<span class="string">&#x27;上海市虹桥区&#x27;</span>, )</span><br><span class="line">mycursor.execute(sql, adr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete 删除记录</span></span><br><span class="line">sql = <span class="string">&quot;DELETE FROM table_name WHERE name = %s&quot;</span></span><br><span class="line">name = (<span class="string">&#x27;有容&#x27;</span>,)</span><br><span class="line">mycursor.execute(sql, name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># update 更新记录</span></span><br><span class="line">sql = <span class="string">&quot;UPDATE table_name SET adress = %s WHERE adress = %s&quot;</span></span><br><span class="line">val = (<span class="string">&#x27;上海市黄浦区&#x27;</span>, <span class="string">&#x27;上海市虹桥区&#x27;</span>)</span><br><span class="line">mycursor.execute(sql, val)</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Python</category>
